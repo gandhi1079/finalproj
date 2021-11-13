@@ -1,0 +1,195 @@
+<form [formGroup]="contactform" (ngSubmit)="RegisterUser()">
+    <p>
+        <label>First Name</label>
+        <input type="text" name="name" id="name" formControlName="name"/>
+    </p>
+    <div *ngIf="!name!.valid && (name!.dirty || name!.touched)" class="error">
+        <div *ngIf="name!.errors!.required">
+          First Name is required
+        </div>
+        </div> 
+
+        <!-- <p>
+          <label >Father's Name</label>
+          <input type="text" name="mname" id="mname" formControlName="mname"/>
+      </p>
+      <div *ngIf="!mname!.valid && (mname!.dirty || mname!.touched)" class="error">
+          <div *ngIf="mname!.errors!.required">
+            Father's Name is required
+          </div>
+          </div>
+          <p>
+            <label >Mother's Name</label>
+            <input type="text" name="motname" id="motname" formControlName="motname"/>
+        </p>
+        <div *ngIf="!motname!.valid && (motname!.dirty || motname!.touched)" class="error">
+            <div *ngIf="motname!.errors!.required">
+              Mother's Name is required
+            </div>
+            </div>
+
+          <p>
+            <label >Last Name</label>
+            <input type="text" name="lname" id="lname" formControlName="lname"/>
+        </p>
+        <div *ngIf="!lname!.valid && (lname!.dirty || lname!.touched)" class="error">
+            <div *ngIf="lname!.errors!.required">
+               Last Name is required
+            </div>
+            </div> -->
+
+            
+    <p><label>Institute code</label>
+        <input type="text" name="institutecode" id="institutecode" formControlName="institutecode" />
+    </p>
+     <div *ngIf="!institutecode!.valid && (institutecode!.dirty || institutecode!.touched)" class="error">
+        <div *ngIf="institutecode!.errors!.required">
+          Institute code is required
+        </div>
+    </div> 
+   
+
+    
+       <p> <label>Aadhar No</label>
+        <input type="number" name="aadharno" id="aadharno"   formControlName="aadharnumber" /></p>
+        <div *ngIf="!aadharnumber!.valid && (aadharnumber!.dirty || aadharnumber!.touched)" class="error">
+        <div *ngIf="aadharnumber!.errors!.required">
+          Aadhar is required
+        </div>
+    </div>  
+
+   
+         <p><label>Bank IFSC Code</label>
+        <input type="text" name="bankifsccode" id="bankifsccode"  formControlName="bankifsccode" /></p>
+        <div *ngIf="!bankifsccode!.valid && (bankifsccode!.dirty || bankifsccode!.touched)" class="error">
+            <div *ngIf="bankifsccode!.errors!.required">
+              Bank IFSC code is required
+            </div>
+        </div>  
+
+    
+        <p><label>Bank Account Number</label>
+        <input type="number" name="bankaccountnumber" id="bankaccountnumber"   formControlName="bankaccountnumber" /></p>
+        <div *ngIf="!bankaccountnumber!.valid && (bankaccountnumber!.dirty || bankaccountnumber!.touched)" class="error">
+            <div *ngIf="bankaccountnumber!.errors!.required">
+              Bank Account number is required
+            </div>
+        </div>  
+
+         <p> <label>Bank Name</label>
+        <input type="text" name="bankname" id="bankname"  formControlName="bankname" /></p>
+         <div *ngIf="!bankname!.valid && (bankname!.dirty || bankname!.touched)" class="error">
+            <div *ngIf="bankname!.errors!.required">
+              Bank name is required
+            </div>
+        </div>   
+    
+       <p> <label >Gender</label>
+        <input type="radio" name="gender" value="male" formControlName="gender" >male
+        <input type="radio" name="gender" value="female" formControlName="gender">female</p>
+         <div *ngIf="!gender!.valid && (gender!.dirty || gender!.touched)" class="error">
+          <div *ngIf="gender!.errors!.required">
+            Bank name is required
+          </div>
+      </div>  
+     
+
+    
+       <!-- <p> <label>City</label>
+        <select name="city">
+            <option value="-1" selected>select..</option>
+            <option value="bangalore" selected>bangalore</option>
+            <option value="pune" selected>pune</option>
+            <option value="mumbai" selected>mumbai</option>
+            <option value="maharashtra" selected>maharashtra</option>
+        </select></p> -->
+    
+        <!-- <p><label>City</label>
+          <input type="text" name="city" id="city"   formControlName="city" /></p> 
+          <div *ngIf="!city!.valid && (city!.dirty || city!.touched)" class="error">
+              <div *ngIf="city!.errors!.required">
+                City is required
+              </div>
+          </div>  -->
+
+
+          <!-- <p><label>Pincode</label>
+            <input type="text" name="pincode" id="pincode"   formControlName="pincode" /></p> 
+            <div *ngIf="!pincode!.valid && (pincode!.dirty || pincode!.touched)" class="error">
+                <div *ngIf="pincode!.errors!.required">
+                  Pincode is required
+                </div>
+            </div>  -->
+
+
+            <!-- <p><label>State</label>
+              <input type="text" name="state" id="state"   formControlName="state" /></p> 
+              <div *ngIf="!state!.valid && (state!.dirty || state!.touched)" class="error">
+                  <div *ngIf="state!.errors!.required">
+                    State is required
+                  </div>
+              </div>  -->
+    
+       <!-- <p> <label>Course</label>
+        <select name="course">
+            <option value="-1" selected>select..</option>
+            <option value="BE" selected>BE</option>
+            <option value="B.tech" selected>B.TECH</option>
+            <option value="MCA" selected>MCA</option>
+            <option value="MBA" selected>MBA</option>
+        </select></p>   -->
+
+        <!-- <p><label>District</label>
+          <input type="text" name="district" id="district"   formControlName="district" /></p> 
+          <div *ngIf="!district!.valid && (district!.dirty || district!.touched)" class="error">
+              <div *ngIf="district!.errors!.required">
+                District Name is required
+              </div>
+          </div>  -->
+    
+      <p> <label>EmailId</label>
+        <input type="text" name="emailid" id="emailid" formControlName="emailid"/></p>
+          <div *ngIf="!emailid!.valid && (emailid!.dirty || emailid!.touched)" class="error">
+            <div *ngIf="emailid!.errors!.required">
+              Email is required
+            </div>
+        </div>   
+      
+
+   
+        <p><label>MobileNo</label>
+        <input type="number" name="mobilenumber" id="mobilenumber"   formControlName="mobilenumber" /></p> 
+         <div *ngIf="!mobilenumber!.valid && (mobilenumber!.dirty || mobilenumber!.touched)" class="error">
+            <div *ngIf="mobilenumber!.errors!.required">
+              Mobile No is required
+            </div>
+        </div>  
+   
+       <p> <label>DOB</label>
+        <input type="date" name="dob" id="dob" formControlName="dob" ></p>
+   
+
+    
+        <p> <label>Set password</label>
+        <input type="text" name="password" id="password"   formControlName="password" /></p>
+         <div *ngIf="!password!.valid && (password!.dirty || password!.touched)" class="error">
+            <div *ngIf="password!.errors!.required">
+              Password is required
+            </div>
+        </div> 
+     
+        <p> <label>Confirm Password</label>
+        <input type=text name="confirmpswd" id="confirmswd"   formControlName="confirmpswd" /></p>
+        <div *ngIf="!confirmpswd!.valid && (confirmpswd!.dirty || confirmpswd!.touched)" class="error">
+            <div *ngIf="confirmpswd!.errors!.required">
+              Password is required
+            </div>
+        </div> 
+        
+    <p>
+        <input type="submit" [disabled]="!contactform.valid" value="Register"/>
+        <input type="reset" />
+        
+    </p>
+    {{message}}
+  </form> 
