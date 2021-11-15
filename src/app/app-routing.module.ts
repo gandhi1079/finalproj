@@ -23,6 +23,7 @@ import { StudentApplicationFormComponent } from './student-application-form/stud
 import { StudentHomePageComponent } from './student-home-page/student-home-page.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { StudentRegistrationComponent } from './student-registration/student-registration.component';
+import { StudentprofileComponent } from './studentprofile/studentprofile.component';
 
 const routes: Routes = [//{path: '', redirectTo:'/Home',pathMatch:'full'},
 {path: 'Logout' , component: HomeComponent},
@@ -34,12 +35,7 @@ const routes: Routes = [//{path: '', redirectTo:'/Home',pathMatch:'full'},
 {path: 'Home', component: HomeComponent},
 {path: 'AboutUs', component: AboutUsComponent},
 {path:'InstituteHomePage',component:InstituteHomePageComponent},
-{path:'Scheme1',component: Scheme1Component},
-{path:'Scheme2',component: Scheme2Component},
-{path:'Scheme3',component: Scheme3Component},
-{path:'Scholarship',component: ScholarshipComponent},
 {path: 'MinistryLogin', component: MinistryLoginComponent},
-{path: 'CheckStudentStatus', component: CheckStudentStatusComponent},
 {path: 'CheckInstituteStatus', component: CheckInstituteStatusComponent},
 {path: 'Registration', component: NewRegistrationOptionsComponent,
 children:[
@@ -56,7 +52,14 @@ children:[
 {path: 'MinistryLogin', component: MinistryLoginComponent},
 ]},
 {path:'InstituteHomePage',component:InstituteHomePageComponent},
-{path:'StudentHomePage',component:StudentHomePageComponent},
+{path:'StudentHomePage',component:StudentHomePageComponent,
+children:[{path:'Scheme1',component: Scheme1Component},
+{path:'Scheme2',component: Scheme2Component},
+{path:'Scheme3',component: Scheme3Component},
+{path:'Scholarship',component: ScholarshipComponent},
+{path: 'CheckStudentStatus', component: CheckStudentStatusComponent},
+{path:'Studentprofile',component:StudentprofileComponent}]
+},
 {path:'StateNodalHome',component: StateNodalOfficerHomeComponent},
 {path: 'MinistryHome', component: MinistryHomeComponent},
 //{path: '**', redirectTo:'/Home',pathMatch:'full'}

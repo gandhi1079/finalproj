@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
@@ -9,7 +10,8 @@ import { StudentService } from '../student.service';
 })
 export class StudentLoginComponent implements OnInit {
 
-  
+  aadharnumberpattern="^[0-9]{12}$";
+  setpsedPattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$";
 
   model : any={};    
 
@@ -17,27 +19,51 @@ export class StudentLoginComponent implements OnInit {
   constructor(private router:Router,private Service:StudentService) { }    
 
   ngOnInit() {    
-    sessionStorage.removeItem('Aadharnumber');    
-    sessionStorage.clear();    
+  //  this.model=new FormGroup({
+  //    aadharnumber: new FormControl("",[Validators.required,Validators.pattern(this.aadharnumberpattern)]),
+  //    password:new FormControl("",[Validators.required,Validators.pattern(this.setpsedPattern)])
+  //  })
+    // localStorage.removeItem('aadharnumber');    
+    // localStorage.clear();    
   }    
-  login(){    
-       console.log(this.model);
+  // login(){    
+  //     // console.log(this.model.value);
        
-    this.Service.Login(this.model).subscribe(
-      (res) => {  
+  //   this.Service.Login(this.model.value).subscribe(
+  //     (res) => {  
 
-          console.log("Success");
-          sessionStorage.setItem('Aadharnumber',this.model.Aadharnumber)
-          //this.Service.sendstatus(true);
-          this.Service.subject.next(true);
-          this.router.navigate(['Home']);     
+  //         console.log("Success");
+  //        localStorage.setItem('aadharnumber',this.model.value.aadharnumber)
+  //         //this.Service.sendstatus(true);
+  //         this.Service.subject.next(true);
+  //        // console.log(localStorage.getItem('aadharnumber'))
+  //         this.router.navigate(['StudentHomePage']);     
            
-      },    
-      error => {    
-        this.errorMessage = "Login Failed";    
-      }
-      );    
-  };    
+  //     },    
+  //     error => {    
+  //       this.errorMessage = "Login Failed";    
+  //     }
+  //     );    
+  // };    
+  login(){    
+    console.log(this.model);
+    
+ this.Service.Login(this.model).subscribe(
+   (res) => {  
+
+       console.log("Success");
+       sessionStorage.setItem('aadharnumber',this.model.aadharnumber)
+       //this.Service.sendstatus(true);
+       this.Service.subject.next(true);
+       this.router.navigate(['StudentHomePage']);     
+        
+   },    
+   error => {    
+     this.errorMessage = "Login Failed";    
+   }
+   );    
+};  
+
 
 
 }

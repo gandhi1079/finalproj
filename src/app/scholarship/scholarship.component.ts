@@ -1,21 +1,7 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-scholarship',
-//   templateUrl: './scholarship.component.html',
-//   styleUrls: ['./scholarship.component.css']
-// })
-// export class ScholarshipComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
 import { Component, OnInit } from '@angular/core';
-import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Form, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ScholarshipformService } from '../scholarshipform.service';
 
 @Component({
   selector: 'app-scholarship',
@@ -27,129 +13,159 @@ export class ScholarshipComponent implements OnInit {
  aadharnoPattern="^[0-9]{12}$";
  previousyearPattern="^[0-9]{4}$";
  rollnumberPattern="^[A-Z]{2}[0-9]{6}$";
- prepercatngePattern="^[0-9.]$"
+ 
   
 
-
-  Scholarship:FormGroup=new FormGroup({
-  aadharno:new FormControl("",[Validators.required,Validators.pattern(this.aadharnoPattern)]),
-  category:new FormControl("",Validators.required),
-  religion:new FormControl("",Validators.required),
-  anualincome: new FormControl("",[Validators.required,Validators.pattern("^[0-9]*$")]),
-  currentcourse: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
-  currentyear: new FormControl("",[Validators.required,Validators.pattern(this.currentyearPattern)]),
- universityname: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
- //courseclassdate:new FormControl("",Validators.required),
- previouscourse: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
- previousyear:new FormControl("",[Validators.required,Validators.pattern(this.previousyearPattern)]),
- // prepercatnge:new FormControl("",[Validators.required,Validators.pattern(this.prepercatngePattern)]),
-  rollnumber:new FormControl("",[Validators.required,Validators.pattern(this.rollnumberPattern)]),
-  boardname:new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
-  tenthpassyear: new FormControl("",[Validators.required,Validators.pattern(this.previousyearPattern)]),
- // tenpercatnge:new FormControl("",[Validators.required,Validators.pattern("^[0-9.]$")]),
-  twerollnumber: new FormControl("",[Validators.required,Validators.pattern(this.rollnumberPattern)]),
-  boardname1: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
-  twethpassyear : new FormControl("",[Validators.required,Validators.pattern(this.previousyearPattern)]),
- // twepercatnge:new FormControl("",[Validators.required,Validators.pattern("^[0-9.]$")]),
-  admissionfees: new FormControl("",[Validators.required,Validators.pattern("^[0-9]*$")]),
- tutionfees: new FormControl("",[Validators.required,Validators.pattern("^[0-9]*$")]),
- otherfees: new FormControl("",[Validators.required,Validators.pattern("^[0-9]*$")]),
- fatocc: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
- motocc: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z .-]*$")]),
-
-  
-});
-get aadharno()
+ get aadharnumber()
 {
-  return this.Scholarship.get('aadharno');
-}
+   return this.scholarshipform.get('aadharnumber');
+  }
 get category()
 {
-  return this.Scholarship.get('category');
+  return this.scholarshipform.get('category');
 }
 get religion()
 {
-  return this.Scholarship.get('religion');
+  return this.scholarshipform.get('religion');
 }
-get anualincome()
+get annualincome()
 {
-  return this.Scholarship.get('anualincome');
+  return this.scholarshipform.get('annualincome');
 }
 get currentcourse()
 {
-  return this.Scholarship.get('currentcourse');
+  return this.scholarshipform.get('currentcourse');
 }
 get currentyear()
 {
-  return this.Scholarship.get('currentyear');
+  return this.scholarshipform.get('currentyear');
 }
 get universityname(){
-  return this.Scholarship.get('universityname');
+  return this.scholarshipform.get('universityname');
 }
-get courseclassdate(){
-  return this.Scholarship.get('courseclassdate');
-}
+//get courseclassdate(){
+ // return this.Scholarship.get('courseclassdate');
+//}
 get previouscourse(){
-  return this.Scholarship.get('previouscourse');
+  return this.scholarshipform.get('previouscourse');
 }
 get previousyear(){
-  return this.Scholarship.get('previousyear');
+  return this.scholarshipform.get('previousyear');
 }
-get prepercatnge(){
-  return this.Scholarship.get('prepercatnge');
+get previouspercentage(){
+  return this.scholarshipform.get('previouspercentage');
 }
 get rollnumber(){
-  return this.Scholarship.get('rollnumber');
+  return this.scholarshipform.get('rollnumber');
 }
-get boardname(){
-  return this.Scholarship.get('boardname');
+get tenthboardname(){
+  return this.scholarshipform.get('tenthboardname');
 }
 get tenthpassyear(){
-  return this.Scholarship.get('tenthpassyear');
+  return this.scholarshipform.get('tenthpassyear');
 }
-get tenpercatnge(){
-  return this.Scholarship.get('tenpercatnge');
+get tenthpercatnge(){
+  return this.scholarshipform.get('tenthpercatnge');
 }
-get twerollnumber(){
-  return this.Scholarship.get('twerollnumber');
+get twelvethrollnumber(){
+  return this.scholarshipform.get('twelvethrollnumber');
 }
-get boardname1(){
-  return this.Scholarship.get('boardname1');
+get twelvethboardname(){
+  return this.scholarshipform.get('twelvethboardname');
 }
-get twethpassyear(){
-  return this.Scholarship.get('twethpassyear');
+get twelvethpassyear(){
+  return this.scholarshipform.get('twelvethpassyear');
 }
-get twepercatnge(){
-  return this.Scholarship.get('twepercatnge');
+get twelvethpercatnge(){
+  return this.scholarshipform.get('twelvethpercatnge');
 }
 get admissionfees()
 {
-  return this.Scholarship.get('admissionfees');
+  return this.scholarshipform.get('admissionfees');
 }
 get tutionfees()
 {
-  return this.Scholarship.get('tutionfees');
+  return this.scholarshipform.get('tutionfees');
 }
 get otherfees()
 {
-  return this.Scholarship.get('otherfees');
+  return this.scholarshipform.get('otherfees');
+}
+get maritialstatus()
+{
+  return this.scholarshipform.get('maritialstatus');
 }
 
-get fatocc(){
-  return this.Scholarship.get('fatocc');
+get fatheroccupation(){
+  return this.scholarshipform.get('fatheroccupation');
 }
-get motocc(){
-  return this.Scholarship.get('motocc');
+get motheroccupation(){
+  return this.scholarshipform.get('motheroccupation');
 }
 
+message!:string;
+data = false;
+//aadhar!:number|null;    
+scholarshipform!: FormGroup;    
+    
+
+  constructor(private formbuider:FormBuilder,private route: Router,private Service:ScholarshipformService) { }
 
 
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  ngOnInit() {
+    //this.aadhar=parseInt(localStorage.getItem('aadharnumber'))
+//console.log("in scholarship"+localStorage.getItem('aadharnumber'))
+    this.scholarshipform=this.formbuider.group ({
+    aadharnumber:['',[Validators.required,Validators.pattern(this.aadharnoPattern)]],
+    // aadharnumber:[localStorage.getItem('aadharnumber')],
+      category:['',Validators.required],
+     religion:['',Validators.required],
+      annualincome:['',Validators.required],
+      currentcourse:['',Validators.required],
+      currentyear: ['',Validators.required],
+     universityname: ['',Validators.required],
+     //courseclassdate:new FormControl("",Validators.required),
+    previouscourse:['',Validators.required],
+     previousyear:['',Validators.required],
+    previouspercentage:['',Validators.required],
+     rollnumber:['',[Validators.required,Validators.pattern(this.rollnumberPattern)]],
+      tenthboardname:['',Validators.required],
+      tenthpassyear:['',Validators.required],
+     tenthpercatnge:['',Validators.required],
+      twelvethrollnumber: ['',[Validators.required,Validators.pattern(this.rollnumberPattern)]],
+      twelvethboardname: ['',Validators.required],
+      twelvethpassyear :['',Validators.required],
+    twelvethpercatnge:['',Validators.required],
+      admissionfees: ['',Validators.required],
+     tutionfees:['',Validators.required],
+     otherfees: ['',Validators.required],
+    maritialstatus: ['',Validators.required],
+     fatheroccupation:['',Validators.required],
+     motheroccupation: ['',Validators.required]
+       
+     });
   }
-  submitform(){
-    console.log(this.Scholarship.value);
-  }
+  // submitform(){
+  //   console.log(this.contactform.value);
+  // }
+  
+  submitform()    
+  {  // console.log(this.scholarshipform.value)
+   // this.scholarshipform.value.aadharnumber=localStorage.getItem('aadharnumber')
+  this.Service.Register(this.scholarshipform.value).subscribe(    
+    (data)=>    
+    {    
+     // console.log(this.scholarshipform.value)
+      console.log(data);
+      this.scholarshipform.reset();    
+      this.message="Details Submitted Successfully"
+      
+    }); 
+    
+      
+  }    
+
+  
 
 }

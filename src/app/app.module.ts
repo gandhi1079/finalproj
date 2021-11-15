@@ -29,6 +29,7 @@ import { InstituteApplicationFormComponent } from './institute-application-form/
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
+import { StudentprofileComponent } from './studentprofile/studentprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { MenuComponent } from './menu/menu.component';
     InstituteRegistrationComponent,
     ScholarshipComponent,
     InstituteApplicationFormComponent,
-    MenuComponent
+    MenuComponent,
+    StudentprofileComponent
   ],
   imports: [
     BrowserModule,

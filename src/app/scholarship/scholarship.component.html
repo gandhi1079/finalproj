@@ -1,17 +1,19 @@
 <h1 style="text-align: center;">Schloarship Form</h1>
-<form [formGroup]="Scholarship" (ngSubmit)="submitform()" style="text-align: center;">
+<form [formGroup]="scholarshipform" (ngSubmit)="submitform()" style="text-align: center;">
 
     <h3>Basic Details</h3>
     <br>
     <p>
-        <label >Aadhar Number</label>
-        <input type="text" name="aadharno" id="aadharno" formControlName="aadharno"/>
-    </p>
-    <div *ngIf="!aadharno!.valid && (aadharno!.dirty || aadharno!.touched)" class="error">
-        <div *ngIf="aadharno!.errors!.required">
-          Aadhar No is required
+     <!-- aadhar
+       <input="number"   formControlName="aadharnumber"/> -->
+       <label>Aadhar number</label>
+        <input type="number" name="aadharnumber" id="aadharnumber" formControlName="aadharnumber"/>
+     </p>
+   <div *ngIf="!aadharnumber!.valid && (aadharnumber!.dirty || aadharnumber!.touched)" class="error">
+        <div *ngIf="aadharnumber!.errors!.required">
+          Aadhar Number is required
         </div>
-        </div>
+        </div>   
 
           <label>Religion</label>
         <select name="religion" id="religion" formControlName="religion">
@@ -45,20 +47,20 @@
             </div>
             </div>
 
-        <p>
-          <label >Anual Income</label>
-          <input type="text" name="anualincome" id="anualincome" formControlName="anualincome"/>
+         <p>
+          <label >Annual Income</label>
+          <input type="number" name="annualincome" id="annualincome" formControlName="annualincome"/>
       </p>
-      <div *ngIf="!anualincome!.valid && (anualincome!.dirty || anualincome!.touched)" class="error">
-          <div *ngIf="anualincome!.errors!.required">
-            Anual Income is required
+      <div *ngIf="!annualincome!.valid && (annualincome!.dirty || annualincome!.touched)" class="error">
+          <div *ngIf="annualincome!.errors!.required">
+            Annual Income is required
           </div>
-          </div>
+          </div>  
            <br>
           <h3>Academic Details</h3>
           <br>
 
-          <p>
+           <p>
             <label >Current Course/Class</label>
             <input type="text" name="currentcourse" id="currentcourse" formControlName="currentcourse"/>
         </p>
@@ -69,14 +71,22 @@
             </div>
 
 
-    <p><label>Current Course/Class Year</label>
-        <input type="text" name="currentyear" id="currentyear" formControlName="currentyear" />
-    </p>
+    
+    <label>Current Course/Class Year</label>
+        <select name="currentyear" id="currentyear"  formControlName="currentyear" >
+           
+            <option value="1st" selected>1st</option>
+            <option value="2nd" selected>2nd</option>
+            <option value="3rd" selected>3rd</option>
+            <option value="4th" selected>4th</option>
+            <option value="5th" selected>5th</option>
+             <option value="6th" selected>6th</option>
+        </select>  
     <div *ngIf="!currentyear!.valid && (currentyear!.dirty || currentyear!.touched)" class="error">
         <div *ngIf="currentyear!.errors!.required">
             Current Course/Class year is required
         </div>
-    </div>
+    </div> 
   
     <!-- <p> <label>Course/Class Start Date</label>
         <input type="date" name="courseclassdate" id="courseclassdate" formControlName="courseclassdate"></p>
@@ -86,7 +96,7 @@
             </div>
         </div> -->
     
-       <p> <label>University Name</label>
+        <p> <label>University Name</label>
         <input type="text" name="universityname" id="universityname"   formControlName="universityname" /></p>
        <div *ngIf="!universityname!.valid && (universityname!.dirty || universityname!.touched)" class="error">
         <div *ngIf="universityname!.errors!.required">
@@ -105,23 +115,24 @@
         </div>
 
       <p><label>Previous Course/Class Passing Year</label>
-            <input type="text" name="previousyear" id="previousyear" formControlName="previousyear" />
+            <input type="number" name="previousyear" id="previousyear" formControlName="previousyear" />
         </p>
         <div *ngIf="!previousyear!.valid && (previousyear!.dirty || previousyear!.touched)" class="error">
             <div *ngIf="previousyear!.errors!.required">
              Previous Course/Class Passing year is required
             </div>
-        </div>
+        </div> 
    
-        <!-- <p><label>Previous Perctange %</label>
-        <input type="text" name="prepercatnge" id="prepercatnge"  formControlName="prepercatnge" /></p>
-        <div *ngIf="!prepercatnge!.valid && (prepercatnge!.dirty || prepercatnge!.touched)" class="error">
-            <div *ngIf="prepercatnge!.errors!.required">
+     <p><label>Previous Perctange %</label>
+        <input type="number" name="previouspercentage" id="previouspercentage"  formControlName="previouspercentage" /></p>
+        <div *ngIf="!previouspercentage!.valid && (previouspercentage!.dirty || previouspercentage!.touched)" class="error">
+            <div *ngIf="previouspercentage!.errors!.required">
                 Previous Perctange % is required
             </div>
-        </div>  -->
-            <br>
-       <h3>10th</h3>
+        </div>   
+
+<br>
+        <h3>10th</h3>
         <br>
     
         <p><label>Roll Number</label>
@@ -133,15 +144,15 @@
         </div> 
 
          <p> <label>Board Name</label>
-        <input type="text" name="boardname" id="boardname"  formControlName="boardname" /></p>
-        <div *ngIf="!boardname!.valid && (boardname!.dirty || boardname!.touched)" class="error">
-            <div *ngIf="boardname!.errors!.required">
+        <input type="text" name="tenthboardname" id="tenthboardname"  formControlName="tenthboardname" /></p>
+        <div *ngIf="!tenthboardname!.valid && (tenthboardname!.dirty || tenthboardname!.touched)" class="error">
+            <div *ngIf="tenthboardname!.errors!.required">
               Board name is required
             </div>
         </div>  
 
         <p><label> Passing Year</label>
-            <input type="text" name="tenthpassyear" id="tenthpassyear" formControlName="tenthpassyear" />
+            <input type="number" name="tenthpassyear" id="tenthpassyear" formControlName="tenthpassyear" />
         </p>
         <div *ngIf="!tenthpassyear!.valid && (tenthpassyear!.dirty || tenthpassyear!.touched)" class="error">
             <div *ngIf="tenthpassyear!.errors!.required">
@@ -149,57 +160,57 @@
             </div>
         </div>
 
-        <!-- <p><label>10th Perctange %</label>
-            <input type="text" name="tenpercatnge" id="tenpercatnge"  formControlName="tenpercatnge" /></p>
-            <div *ngIf="!tenpercatnge!.valid && (tenpercatnge!.dirty || tenpercatnge!.touched)" class="error">
-                <div *ngIf="tenpercatnge!.errors!.required">
+         <p><label>10th Perctange %</label>
+            <input type="number" name="tenthpercatnge" id="tenthpercatnge"  formControlName="tenthpercatnge" /></p>
+            <div *ngIf="!tenthpercatnge!.valid && (tenthpercatnge!.dirty || tenthpercatnge!.touched)" class="error">
+                <div *ngIf="tenthpercatnge!.errors!.required">
                     10th Perctange % is required
                 </div>
-            </div>  -->
+            </div>  
 
             <br>
         <h3>12th</h3>
         <br>
     
         <p><label>Roll Number</label>
-        <input type="text" name="twerollnumber" id="twerollnumber"   formControlName="twerollnumber" /></p>
-        <div *ngIf="!twerollnumber!.valid && (twerollnumber!.dirty || twerollnumber!.touched)" class="error">
-            <div *ngIf="twerollnumber!.errors!.required">
+        <input type="text" name="twelvethrollnumber" id="twelvethrollnumber"   formControlName="twelvethrollnumber" /></p>
+        <div *ngIf="!twelvethrollnumber!.valid && (twelvethrollnumber!.dirty || twelvethrollnumber!.touched)" class="error">
+            <div *ngIf="twelvethrollnumber!.errors!.required">
               Roll number is required
             </div>
-        </div> 
+        </div>  
 
          <p> <label>Board Name</label>
-        <input type="text" name="boardname1" id="boardname1"  formControlName="boardname1" /></p>
-        <div *ngIf="!boardname1!.valid && (boardname1!.dirty || boardname1!.touched)" class="error">
-            <div *ngIf="boardname1!.errors!.required">
+        <input type="text" name="twelvethboardname" id="twelvethboardname"  formControlName="twelvethboardname" /></p>
+        <div *ngIf="!twelvethboardname!.valid && (twelvethboardname!.dirty || twelvethboardname!.touched)" class="error">
+            <div *ngIf="twelvethboardname!.errors!.required">
               Board name is required
             </div>
         </div>  
 
         <p><label> Passing Year</label>
-            <input type="text" name="twethpassyear" id="twethpassyear" formControlName="twethpassyear" />
-        </p>
-        <div *ngIf="!twethpassyear!.valid && (twethpassyear!.dirty || twethpassyear!.touched)" class="error">
-            <div *ngIf="twethpassyear!.errors!.required">
+            <input type="number" name="twelvethpassyear" id="twelvethpassyear" formControlName="twelvethpassyear" />
+         </p>
+        <div *ngIf="!twelvethpassyear!.valid && (twelvethpassyear!.dirty || twelvethpassyear!.touched)" class="error">
+            <div *ngIf="twelvethpassyear!.errors!.required">
              12th Passing year is required
             </div>
-        </div>
+        </div>  
 
-        <!-- <p><label>12th Perctange %</label>
-            <input type="text" name="twepercatnge" id="twepercatnge"  formControlName="twepercatnge" /></p>
-            <div *ngIf="!twepercatnge!.valid && (twepercatnge!.dirty || twepercatnge!.touched)" class="error">
-                <div *ngIf="twepercatnge!.errors!.required">
+         <p><label>12th Perctange %</label>
+            <input type="number" name="twelvethpercatnge" id="twelvethpercatnge"  formControlName="twelvethpercatnge" /></p>
+            <div *ngIf="!twelvethpercatnge!.valid && (twelvethpercatnge!.dirty || twelvethpercatnge!.touched)" class="error">
+                <div *ngIf="twelvethpercatnge!.errors!.required">
                     12th Perctange % is required
                 </div>
-            </div>  -->
+            </div> 
 
             <br>
-            <h3>Fees Details</h3>
+             <h3>Fees Details</h3>
             <br>
     
             <p><label>Admission Fees</label>
-                <input type="text" name="admissionfees" id="admissionfees"  formControlName="admissionfees" /></p>
+                <input type="number" name="admissionfees" id="admissionfees"  formControlName="admissionfees" /></p>
                 <div *ngIf="!admissionfees!.valid && (admissionfees!.dirty || admissionfees!.touched)" class="error">
                     <div *ngIf="admissionfees!.errors!.required">
                         Admission Fees is required
@@ -207,7 +218,7 @@
                 </div> 
 
                 <p><label>Tution Fees</label>
-                    <input type="text" name="tutionfees" id="tutionfees"  formControlName="tutionfees" /></p>
+                    <input type="number" name="tutionfees" id="tutionfees"  formControlName="tutionfees" /></p>
                     <div *ngIf="!tutionfees!.valid && (tutionfees!.dirty || tutionfees!.touched)" class="error">
                         <div *ngIf="tutionfees!.errors!.required">
                             Tution Fees is required
@@ -215,7 +226,7 @@
                     </div> 
 
                     <p><label>Other Fees</label>
-                        <input type="text" name="otherfees" id="otherfees"  formControlName="otherfees" /></p>
+                        <input type="number" name="otherfees" id="otherfees"  formControlName="otherfees" /></p>
                         <div *ngIf="!otherfees!.valid && (otherfees!.dirty || otherfees!.touched)" class="error">
                             <div *ngIf="otherfees!.errors!.required">
                                 Other Fees is required
@@ -225,57 +236,60 @@
 
                         <br>
             <h3>Other Personal Details</h3>
-            <br> -->
+            <br> 
 
 
       <!-- <p> <label >Disabled</label>
-        <input type="radio" name="disabled" value="yes" >YES
-        <input type="radio" name="disabled" value="no" >No</p>
+        <input type="radio" name="disabled" value="yes" id="disabled" formControlName="disabled">YES
+        <input type="radio" name="disabled" value="no" id="disabled" formControlName="disabled">No</p>
          <div *ngIf="!gender!.valid && (gender!.dirty || gender!.touched)" class="error">
           <div *ngIf="gender!.errors!.required">
             Bank name is required
           </div>
       </div>  
-     -->
-    <!-- <p><label>Type of Disability</label>
-        <input type="text" name="disability" id="disability"   /></p>
+    </p> 
+
+     <p><label>Type of Disability</label>
+        <input type="text" name="disability" id="disability" value="disability" formControlName="disability"/></p>
          <div *ngIf="!disability!.valid && (disability!.dirty || disability!.touched)" class="error">
             <div *ngIf="disability!.errors!.required">
                 Disability is required
             </div>
-        </div> -->
+        </div>  -->
 
         <label>Maritial Status</label>
-        <select name="maritialstatus">
-            <option value="-1" selected>select..</option>
+        <select name="maritialstatus"  id="maritialstatus" formControlName="maritialstatus" >
             <option value="single" selected>Single</option>
             <option value="divorced" selected>Divorced</option>
             <option value="married" selected>Married</option>
         </select> 
+        <div *ngIf="!maritialstatus!.valid && (maritialstatus!.dirty || maritialstatus!.touched)" class="error">
+            <div *ngIf="maritialstatus!.errors!.required">
+                Father's Occupation is required
+            </div>
+        </div>  
 
 
-         <p><label>Father's Occupation</label>
-            <input type="text" name="fatocc" id="fatocc"  formControlName="fatocc" /></p>
-            <div *ngIf="!fatocc!.valid && (fatocc!.dirty || fatocc!.touched)" class="error">
-                <div *ngIf="fatocc!.errors!.required">
+           <p><label>Father's Occupation</label>
+            <input type="text" name="fatheroccupation" id="fatheroccupation"  formControlName="fatheroccupation" /></p>
+            <div *ngIf="!fatheroccupation!.valid && (fatheroccupation!.dirty || fatheroccupation!.touched)" class="error">
+                <div *ngIf="fatheroccupation!.errors!.required">
                     Father's Occupation is required
                 </div>
             </div> 
 
             <p><label>Mother's Occupation</label>
-                <input type="text" name="motocc" id="motocc"  formControlName="motocc" /></p>
-                <div *ngIf="!motocc!.valid && (motocc!.dirty || motocc!.touched)" class="error">
-                    <div *ngIf="motocc!.errors!.required">
-                        MOther's Occupation is required
+                <input type="text" name="motheroccupation" id="motheroccupation"  formControlName="motheroccupation" /></p>
+                <div *ngIf="!motheroccupation!.valid && (motheroccupation!.dirty || motheroccupation!.touched)" class="error">
+                    <div *ngIf="motheroccupation!.errors!.required">
+                        Mother's Occupation is required
                     </div>
-                </div>  
+                </div>    
 
      
         
     <p>
-        <input type="submit" [disabled]="!Scholarship.valid" value="Register"/>
+        <input type="submit" [disabled]="!scholarshipform.valid" value="Register"/>
         <input type="reset" />
     </p>
   </form>
-
-  <router-outlet></router-outlet>
