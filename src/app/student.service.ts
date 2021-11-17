@@ -50,6 +50,16 @@ export class StudentService {
    {      
     return this.http.post<Register[]>(this.Url +'/register', register, this.httpOptions)  
    } 
-}
+  //  Studentapplicationstatus(aadharnumber:Number):Observable<any>
+  //  {
+  //      return this.http.get<any>(this.Url+'/status/'+aadharnumber)
+  //  }
+  //  Approvedbyinsitute(aadharnumber:Number,statusbystate:any): Observable<Stude> {
+  //   return this.httpClient.put<Product>(this.apiServer +'/' + id, JSON.stringify(product), this.httpOptions)
+    
+  // }
+
+
+  }
 
 

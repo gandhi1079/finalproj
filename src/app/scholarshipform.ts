@@ -25,4 +25,9 @@ export class Scholarshipform {
     maritialstatus!:string;
     fatheroccpation!:string;
     motheroccpation!:string;
+    schlorship!:string;
+    statusbyinstitute!:string;
+  statusbystate!:string;
+  statusbyministry!:string;
+    
 }

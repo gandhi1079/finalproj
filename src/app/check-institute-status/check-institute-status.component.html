@@ -4,13 +4,13 @@
 <table [border]="1" >
     <tr>
         <td rowspan="2"><b>Status</b></td>
+        <th>Institute</th>
         <th>State</th>
         <th>Ministry</th>
     </tr>
-    <tr>
-        <td>Pending/Approved/Disapproved</td>
-        <td>Pending/Approved/Disapproved</td>
+    
+        <tr *ngFor="let list of info" >
+        <td>{{list.statusbystate}}</td>
+        <td>{{list.statusbyministry}}</td>
     </tr>
 </table>
-
-<router-outlet></router-outlet>

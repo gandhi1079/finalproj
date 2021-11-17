@@ -48,4 +48,12 @@ export class InstituteService {
    {      
     return this.http.post<Instituteregister []>(this.Url +'/register', register, this.httpOptions)  
    } 
-}
+   Studentapplicationinfo(institutecode:string):Observable<any[]>
+   {
+       return this.http.get<any[]>(this.Url+'/'+institutecode)
+   }
+   Instituteapplicationstatus(institutecode:any):Observable<any>
+   {
+       return this.http.get<any>(this.Url+'/status/'+institutecode)
+   }
+}//http://localhost:5000/api/institute/DE1659

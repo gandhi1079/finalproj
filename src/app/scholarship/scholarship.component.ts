@@ -102,6 +102,9 @@ get fatheroccupation(){
 get motheroccupation(){
   return this.scholarshipform.get('motheroccupation');
 }
+get schlorship(){
+  return this.scholarshipform.get('schlorship');
+}
 
 message!:string;
 data = false;
@@ -142,7 +145,8 @@ scholarshipform!: FormGroup;
      otherfees: ['',Validators.required],
     maritialstatus: ['',Validators.required],
      fatheroccupation:['',Validators.required],
-     motheroccupation: ['',Validators.required]
+     motheroccupation: ['',Validators.required],
+     schlorship: ['',Validators.required]
        
      });
   }

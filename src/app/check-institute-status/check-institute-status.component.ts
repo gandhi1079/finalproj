@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InstituteService } from '../institute.service';
 
 @Component({
   selector: 'app-check-institute-status',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckInstituteStatusComponent implements OnInit {
 
-  constructor() { }
-
+  info!:any;
+  constructor(private service:InstituteService) { }
+ // x:number|null=sessionStorage.getItem('aadharnumber')JSON.parse(localStorage.getItem('currentUser')!);
   ngOnInit(): void {
+    
+  
+   this.service.Instituteapplicationstatus((sessionStorage.getItem('InstituteCode')!)).subscribe((res:any)=>{
+     console.log(res);
+      this.info=res;
+     // console.log(this.info);
+   })
   }
 
 }

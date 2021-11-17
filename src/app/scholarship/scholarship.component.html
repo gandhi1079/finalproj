@@ -22,7 +22,7 @@
             <option value="sikh" selected>Sikh</option>
             <option value="muslim" selected>Muslim</option>
             <option value="christan" selected>Christan</option>
-            <option value="-1" selected>select..</option>
+            
         </select>
         <div *ngIf="!religion!.valid && (religion!.dirty || religion!.touched)" class="error">
             <div *ngIf="religion!.errors!.required">
@@ -39,7 +39,7 @@
             <option value="nt" selected>NT</option>
             <option value="obc" selected>OBC</option>
             <option value="open" selected>OPEN</option>
-             <option value="-1" selected>select..</option>
+             
         </select>  
         <div *ngIf="!category!.valid && (category!.dirty || category!.touched)" class="error">
             <div *ngIf="category!.errors!.required">
@@ -284,7 +284,22 @@
                     <div *ngIf="motheroccupation!.errors!.required">
                         Mother's Occupation is required
                     </div>
-                </div>    
+                </div>  
+                
+                <h3>Schloarship</h3>
+                <label>Schloarship</label>
+                <select name="schlorship" id="schlorship"  formControlName="schlorship" >
+                   
+                    <option value="Post Matric Schloarship" selected>Post Matric Schloarship</option>
+                    <option value="Pragathi Schloarship" selected>Pragathi Schloarship </option>
+                    <option value="Merit based Schloarship" selected>Merit based Schloarship </option>
+                    
+                </select>  
+            <div *ngIf="!schlorship!.valid && (schlorship!.dirty || schlorship!.touched)" class="error">
+                <div *ngIf="schlorship!.errors!.required">
+                    Current Course/Class year is required
+                </div>
+            </div> 
 
      
         

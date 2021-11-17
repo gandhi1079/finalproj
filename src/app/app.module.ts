@@ -30,6 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { StudentprofileComponent } from './studentprofile/studentprofile.component';
+import { MinistryLoginComponent } from './ministry-login/ministry-login.component';
+import { StateNodalOfficerLoginComponent } from './state-nodal-officer-login/state-nodal-officer-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,13 +57,17 @@ import { StudentprofileComponent } from './studentprofile/studentprofile.compone
     ScholarshipComponent,
     InstituteApplicationFormComponent,
     MenuComponent,
-    StudentprofileComponent
+    StudentprofileComponent,
+    MinistryLoginComponent,
+    StateNodalOfficerLoginComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,FormsModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

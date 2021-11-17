@@ -89,10 +89,10 @@ export class InstituteRegistrationComponent implements OnInit {
         telephone:['',[Validators.required,Validators.pattern(this.telephonePattern)]],
         mobileno:['',[Validators.required,Validators.pattern(this.mobilenoPattern)]],
         universityname: ['',[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]],
-        city: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]),
-        pincode: new FormControl("",[Validators.required,Validators.pattern(this.pincodePattern)]),
-        state: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]),
-        district: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]),
+        city: ['',[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]],
+        pincode:['',[Validators.required,Validators.pattern(this.pincodePattern)]],
+        state: ['',[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]],
+        district: ['',[Validators.required,Validators.pattern("^[a-zA-Z -]*$")]],
         password:['',[Validators.required,Validators.pattern(this.setpsedPattern)]],
         confirmpwd:['',[Validators.required,Validators.pattern(this.setpsedPattern)]]
          });

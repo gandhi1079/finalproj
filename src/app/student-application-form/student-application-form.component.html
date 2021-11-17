@@ -1,1 +1,42 @@
-<h1 style="text-align: center;">Student Applications</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Gender</th>
+            <th>Aadhar Number</th>
+            <th>Category</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Family Income</th>
+            <th>Maritial Status</th>
+            <th>Mother's Occupation</th>
+            <th>Father's Occupation</th>
+            <th> Scholarship Applied</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of info">
+            <td>{{list.name}}</td>
+            <td>{{list.dob|date:'d/M/y'}}</td>
+            <td>{{list.aadharnumber}}</td>
+            <td>{{list.category}}</td>
+            <td>{{list.currentcourse}}</td>
+            <td>{{list.currentyear}}</td>
+            <td>{{list.annualincome}}</td>
+            <td>{{list.maritialstatus}}</td>
+            <td>{{list.motheroccupation}}</td>
+            <td>{{list.fatheroccupation}}</td>  
+            <td>{{list.schlorship}}</td> 
+            <!-- <td><input type="button" value="Approve" onclick="saaa"></td>
+            <td><input type="button" value="Reject"></td> -->
+            <!-- <td>
+                <button [routerLink]="['/update/', register.]">Update</button>
+                <button type="button" (click)="delete(product.id)">Remove</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
+
+
+

@@ -26,10 +26,10 @@ export class InstituteLoginComponent implements OnInit {
       (res) => {  
 
           console.log("Success");
-          sessionStorage.setItem('institutecode',this.model.institutecode)
+          sessionStorage.setItem('InstituteCode',this.model.InstituteCode)
           //this.Service.sendstatus(true);
           this.Service.subject.next(true);
-          this.router.navigate(['Home']);     
+          this.router.navigate(['InstituteHomePage']);     
            
       },    
       error => {    

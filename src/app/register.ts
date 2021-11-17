@@ -10,4 +10,7 @@ aadharnumber!:number;
   bankaccountnumber!:number; 
   bankname!:string;
   password!:string; 
+  statusbyinstitute!:string;
+  statusbystate!:string;
+  statusbyministry!:string;
 }
