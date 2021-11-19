@@ -1,16 +1,16 @@
+<div style="background-color: rgb(229, 229, 247);">
+ <h2 style="text-align: center;padding-top: 1cm;"><i>Student Scholarship Status</i></h2><br>
 
- <h3 style="text-align: center;">Student Scholarship Status</h3><br>
-
-<table  >
-    <tr>
-        <td ><b>Status</b></td>
-        <td><b>Application Id</b></td>
+<table style="padding-bottom: 2cm;" >
+    <tr style="font-weight: bold; font-size: 0.5cm;">
+        <th >Status</th>
+        <th>Application Id</th>
         <th>Institute</th>
         <th>State</th>
         <th>Ministry</th>
     </tr>
     
-    <tr *ngFor="let list of info" >
+    <tr *ngFor="let list of info"  style="font-weight: 700;">
         <td>{{list.schlorship}}</td>
         <td>{{list.id}}</td>
         <td>{{list.statusbyinstitute}}</td>
@@ -18,3 +18,5 @@
         <td>{{list.statusbyministry}}</td>
     </tr>
 </table>
+<br><br><br>
+</div>

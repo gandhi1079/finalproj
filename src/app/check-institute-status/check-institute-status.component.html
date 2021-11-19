@@ -1,16 +1,18 @@
 
-
- <h3 style="text-align: center;">Institute Status</h3><br>
-
-<table  >
-    <tr>
-        <td rowspan="2"><b>Status</b></td>
+<div style="background-color: rgb(229, 229, 247);">
+    <h2 style="text-align: center;padding-top: 1cm;"><i>Institute Status</i></h2><br>
+   
+   <table style="padding-bottom: 2cm;" >
+       <tr style="font-weight: bold; font-size: 0.5cm;">
+        <td rowspan="2" style="background-color:rgb(182, 166, 255);"><b>Status</b></td>
         <th>State</th>
         <th>Ministry</th>
     </tr>
     
-        <tr *ngFor="let list of info" >
+        <tr *ngFor="let list of info"  style="font-weight: 700;" >
         <td>{{list.statusbystate}}</td>
         <td>{{list.statusbyministry}}</td>
     </tr>
 </table>
+<br><br>
+<br>

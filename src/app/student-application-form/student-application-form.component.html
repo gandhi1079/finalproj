@@ -1,8 +1,9 @@
-
-<h3 style="text-align: center;">Student List For Approval</h3><br>
-<table class="table">
-    <thead>
-        <tr>
+<div style="background-color: rgb(229, 229, 247);">
+    <h2 style="text-align: center;padding-top: 1cm;"><i>Student List for Approval</i></h2><br>
+   
+   <table style="padding-bottom: 2cm;" >
+       <tr style="font-weight: 500; font-size: 0.5cm;">
+        
             <th>Application Id</th>
             <th>Student Name</th>
             <th>DOB</th>
@@ -15,11 +16,11 @@
             <th>Mother's Occupation</th>
             <th>Father's Occupation</th>
             <th> Scholarship Applied</th>
-            <th rowspan="2">Approve/Reject</th>
+            <th >Approve</th>
+            <th >Reject</th>
         </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let list of info">
+
+        <tr *ngFor="let list of info" style="font-weight: 300;">
             <td >{{list.id}}</td>
             <td>{{list.name}}</td>
             <td>{{list.dob|date:'d/M/y'}}</td>
@@ -35,8 +36,12 @@
             <td><button (click)="approve(list.id)">Approve</button></td>
             <td><button (click)="reject(list.id)">Reject</button></td>
         </tr>
-    </tbody>
-</table>
+    
+</table><br><br>
+<br>
+<br>
+</div>
+
 
 
 

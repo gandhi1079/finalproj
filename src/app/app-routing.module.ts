@@ -64,10 +64,12 @@ children:
 {path:'StudentHomePage',component:StudentHomePageComponent,
 children:
 [{path:'',redirectTo:'/StudentHomePage/StudentHome', pathMatch:'full'},
-{path:'StudentHome',component:StudentHomeComponent},
-{path:'Scheme1',component: Scheme1Component},
+{path:'StudentHome',component:StudentHomeComponent,
+children:
+[{path:'Scheme1',component: Scheme1Component},
 {path:'Scheme2',component: Scheme2Component},
-{path:'Scheme3',component: Scheme3Component},
+{path:'Scheme3',component: Scheme3Component}
+]},
 {path:'Scholarship',component: ScholarshipComponent},
 {path: 'CheckStudentStatus', component: CheckStudentStatusComponent},
 {path:'Studentprofile',component:StudentprofileComponent}]

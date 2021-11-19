@@ -6,13 +6,23 @@ table{
     
     margin-left: auto;
     margin-right: auto;
+   
 }
 
-td,th{
-    border: 1px solid #1b1717;
+th{
+    border: 3px solid #1b1717;
+    text-align: center;
+    padding: 8px;
+    background-color: rgb(182, 166, 255);
+}
+td
+{  
+    border: 3px solid #1b1717;
     text-align: center;
     padding: 8px;
 }
+
+
 tr:nth-child(even){
     background-color: #dddddd;
 }

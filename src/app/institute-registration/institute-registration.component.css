@@ -24,7 +24,7 @@
   
 }
 .login-container {
-  background: #ebebeb;
+  background-color:rgba(104, 169, 223, 0.507);
   padding: 5px;
   color: black;
   border-bottom-left-radius: 1cm;
@@ -56,7 +56,7 @@
 }
 
 
-.login input [type="submit"] {
+.login input [type="submit" ] {
   background: lightslategrey;
   border-color: transparent;
   color: #fff;
@@ -72,7 +72,11 @@
   font-weight: 600;
 }
 
-.login input[type="reset"]:focus {
-  border-color: #05a;
+.login input[type="reset"]:hover {
+  background: lightslategrey;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  
   
 }

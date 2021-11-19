@@ -1,0 +1,19 @@
+#div1{
+    /* text-align: center; */
+margin-left: auto;
+margin-right: auto;
+width:60%;
+border:  3px solid rgb(60, 15, 66);
+padding-bottom: 1cm;
+line-height: 1.2;
+padding-left: 1cm;
+padding-right: 1cm;
+padding-top: 1cm;
+border-radius: 1cm;
+line-height: 0.8cm;
+font-size: large;
+font-weight: 500;
+
+
+
+}  

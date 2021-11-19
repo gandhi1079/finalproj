@@ -31,7 +31,7 @@
     <div *ngIf="message2">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="StateNodalHome/StudentHomePage">State Nodal Home </a>
+          <a class="nav-link" routerLink="StateNodalHome/StateHome">State Nodal Home </a>
         </li></ul>
     </div>
     <div *ngIf="message3">
@@ -90,6 +90,7 @@
 
 
 <div *ngIf="message2"><ul class="navbar-nav">
+  
   <li class="nav-item">
     <a class="nav-link" routerLink="StateNodalHome/StudentApplication1">Students List For Approval</a>
   </li>
@@ -144,8 +145,8 @@
 
 <router-outlet></router-outlet>
 
-<footer class="page-footer  font-small blue pt-4">
-<div class="footer-copyright text-center py-3">© 2020 Copyright:
+<footer class="page-footer  font-small blue pt-4 bg-dark ">
+<div class="footer-copyright text-center py-3"><p style="color: white;">© 2020 Copyright:</p>
     <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
   </div>
 </footer>

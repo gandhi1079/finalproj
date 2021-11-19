@@ -1,3 +1,4 @@
+<div style="background-color:rgb(221, 227, 238 ); padding-bottom: 2cm; padding-top: 2cm">
 <div class="login">
     <h2 class="login-header"> SCHOLARSHIP FORM FORM</h2>
 
@@ -9,17 +10,17 @@
      <!-- aadhar
        <input="number"   formControlName="aadharnumber"/> -->
        <label>Aadhar number</label>
-        <input type="number" name="aadharnumber" id="aadharnumber" formControlName="aadharnumber"/>
+        <input type="number" name="aadharnumber" id="aadharnumber" formControlName="aadharnumber" placeholder="xxxxxxxxxxxx"/>
      </p>
    <div *ngIf="!aadharnumber!.valid && (aadharnumber!.dirty || aadharnumber!.touched)" class="error">
         <div *ngIf="aadharnumber!.errors!.required">
-          Aadhar Number is required
+         <p> Aadhar Number is required</p>
         </div>
         </div>   
 
-          <label>Religion</label>
-          <br>
-        <select name="religion" id="religion" formControlName="religion">
+        <p> <label>Religion</label></p> 
+         
+        <select name="religion" id="religion" formControlName="religion" >
             
             <option value="hindu" selected>Hindu</option>
             <option value="sikh" selected>Sikh</option>
@@ -29,14 +30,14 @@
         </select>
         <div *ngIf="!religion!.valid && (religion!.dirty || religion!.touched)" class="error">
             <div *ngIf="religion!.errors!.required">
-                religion is required
+               <p> Religion is required</p>
             </div>
             </div>
         <br>
         <br>
 
-        <label>Category</label>
-        <br>
+       <p><label>Category</label></p> 
+        
         <select name="category" id="category"  formControlName="category" >
            
             <option value="sc" selected>SC</option>
@@ -48,17 +49,17 @@
         </select>  
         <div *ngIf="!category!.valid && (category!.dirty || category!.touched)" class="error">
             <div *ngIf="category!.errors!.required">
-                category is required
+               <p> Category is required</p>
             </div>
             </div>
 <br>
          <p>
           <label >Annual Income</label>
-          <input type="number" name="annualincome" id="annualincome" formControlName="annualincome"/>
+          <input type="number" name="annualincome" id="annualincome" formControlName="annualincome" />
       </p>
       <div *ngIf="!annualincome!.valid && (annualincome!.dirty || annualincome!.touched)" class="error">
           <div *ngIf="annualincome!.errors!.required">
-            Annual Income is required
+          <p> Annual Income is required</p> 
           </div>
           </div>  
            <br>
@@ -66,18 +67,18 @@
           <br>
 
            <p>
-            <label >Current Course/Class</label>
-            <input type="text" name="currentcourse" id="currentcourse" formControlName="currentcourse"/>
+            <label >Current Course </label>
+            <input type="text" name="currentcourse" id="currentcourse" formControlName="currentcourse" placeholder="B.Tech"/>
         </p>
         <div *ngIf="!currentcourse!.valid && (currentcourse!.dirty || currentcourse!.touched)" class="error">
             <div *ngIf="currentcourse!.errors!.required">
-               Current Course/Class is required
+             <p>  Current Course is required </p>
             </div>
             </div>
 
 
-    
-    <label>Current Course/Class Year</label>
+   <p>
+    <label>Current Course Year</label></p> 
         <select name="currentyear" id="currentyear"  formControlName="currentyear" >
            
             <option value="1st" selected>1st</option>
@@ -89,7 +90,7 @@
         </select>  
     <div *ngIf="!currentyear!.valid && (currentyear!.dirty || currentyear!.touched)" class="error">
         <div *ngIf="currentyear!.errors!.required">
-            Current Course/Class year is required
+           <p> Current Course year is required</p>
         </div>
     </div> 
   
@@ -102,37 +103,37 @@
         </div> -->
     
         <p> <label>University Name</label>
-        <input type="text" name="universityname" id="universityname"   formControlName="universityname" /></p>
+        <input type="text" name="universityname" id="universityname"   formControlName="universityname" placeholder="World Peace"/></p>
        <div *ngIf="!universityname!.valid && (universityname!.dirty || universityname!.touched)" class="error">
         <div *ngIf="universityname!.errors!.required">
-          University Name is required
+         <p>University Name is required</p> 
         </div>
     </div> 
 
     <p>
-        <label >Previous Course/Class</label>
-        <input type="text" name="previouscourse" id="previouscourse" formControlName="previouscourse"/>
+        <label >Previous Course </label>
+        <input type="text" name="previouscourse" id="previouscourse" formControlName="previouscourse" placeholder="B.Tech"/>
     </p>
     <div *ngIf="!previouscourse!.valid && (previouscourse!.dirty || previouscourse!.touched)" class="error">
         <div *ngIf="previouscourse!.errors!.required">
-           Previous Course/Class is required
+          <p> Previous Course is required</p>
         </div>
         </div>
 
-      <p><label>Previous Course/Class Passing Year</label>
-            <input type="number" name="previousyear" id="previousyear" formControlName="previousyear" />
+      <p><label>Previous Course Passing Year</label>
+            <input type="number" name="previousyear" id="previousyear" formControlName="previousyear" placeholder="2014"/>
         </p>
         <div *ngIf="!previousyear!.valid && (previousyear!.dirty || previousyear!.touched)" class="error">
             <div *ngIf="previousyear!.errors!.required">
-             Previous Course/Class Passing year is required
+          <p>   Previous Course Passing year is required</p>
             </div>
         </div> 
    
      <p><label>Previous Perctange %</label>
-        <input type="number" name="previouspercentage" id="previouspercentage"  formControlName="previouspercentage" /></p>
+        <input type="number" name="previouspercentage" id="previouspercentage"  formControlName="previouspercentage" placeholder="84.2" /></p>
         <div *ngIf="!previouspercentage!.valid && (previouspercentage!.dirty || previouspercentage!.touched)" class="error">
             <div *ngIf="previouspercentage!.errors!.required">
-                Previous Perctange % is required
+              <p>  Previous Perctange % is required</p>
             </div>
         </div>   
 
@@ -141,35 +142,35 @@
         <br>
     
         <p><label>Roll Number</label>
-        <input type="text" name="rollnumber" id="rollnumber"   formControlName="rollnumber" /></p>
+        <input type="text" name="rollnumber" id="rollnumber"   formControlName="rollnumber" placeholder="DE173133" /></p>
         <div *ngIf="!rollnumber!.valid && (rollnumber!.dirty || rollnumber!.touched)" class="error">
             <div *ngIf="rollnumber!.errors!.required">
-              Roll number is required
+         <p>    Roll number is required</p> 
             </div>
         </div> 
 
          <p> <label>Board Name</label>
-        <input type="text" name="tenthboardname" id="tenthboardname"  formControlName="tenthboardname" /></p>
+        <input type="text" name="tenthboardname" id="tenthboardname"  formControlName="tenthboardname" placeholder="State Board"/></p>
         <div *ngIf="!tenthboardname!.valid && (tenthboardname!.dirty || tenthboardname!.touched)" class="error">
             <div *ngIf="tenthboardname!.errors!.required">
-              Board name is required
+           <p>   Board name is required</p>
             </div>
         </div>  
 
         <p><label> Passing Year</label>
-            <input type="number" name="tenthpassyear" id="tenthpassyear" formControlName="tenthpassyear" />
+            <input type="number" name="tenthpassyear" id="tenthpassyear" formControlName="tenthpassyear"  placeholder="2017"/>
         </p>
         <div *ngIf="!tenthpassyear!.valid && (tenthpassyear!.dirty || tenthpassyear!.touched)" class="error">
             <div *ngIf="tenthpassyear!.errors!.required">
-             10th Passing year is required
+          <p>  10th Passing year is required</p> 
             </div>
         </div>
 
          <p><label>10th Perctange %</label>
-            <input type="number" name="tenthpercatnge" id="tenthpercatnge"  formControlName="tenthpercatnge" /></p>
+            <input type="number" name="tenthpercatnge" id="tenthpercatnge"  formControlName="tenthpercatnge" placeholder="84.2" /></p>
             <div *ngIf="!tenthpercatnge!.valid && (tenthpercatnge!.dirty || tenthpercatnge!.touched)" class="error">
                 <div *ngIf="tenthpercatnge!.errors!.required">
-                    10th Perctange % is required
+                <p>    10th Perctange % is required</p>
                 </div>
             </div>  
 
@@ -178,35 +179,35 @@
         <br>
     
         <p><label>Roll Number</label>
-        <input type="text" name="twelvethrollnumber" id="twelvethrollnumber"   formControlName="twelvethrollnumber" /></p>
+        <input type="text" name="twelvethrollnumber" id="twelvethrollnumber"   formControlName="twelvethrollnumber" placeholder="DE173132" /></p>
         <div *ngIf="!twelvethrollnumber!.valid && (twelvethrollnumber!.dirty || twelvethrollnumber!.touched)" class="error">
             <div *ngIf="twelvethrollnumber!.errors!.required">
-              Roll number is required
+            <p>  Roll number is required</p>
             </div>
         </div>  
 
          <p> <label>Board Name</label>
-        <input type="text" name="twelvethboardname" id="twelvethboardname"  formControlName="twelvethboardname" /></p>
+        <input type="text" name="twelvethboardname" id="twelvethboardname"  formControlName="twelvethboardname" placeholder="State Board"/></p>
         <div *ngIf="!twelvethboardname!.valid && (twelvethboardname!.dirty || twelvethboardname!.touched)" class="error">
             <div *ngIf="twelvethboardname!.errors!.required">
-              Board name is required
+           <p>  Board name is required</p> 
             </div>
         </div>  
 
         <p><label> Passing Year</label>
-            <input type="number" name="twelvethpassyear" id="twelvethpassyear" formControlName="twelvethpassyear" />
+            <input type="number" name="twelvethpassyear" id="twelvethpassyear" formControlName="twelvethpassyear" placeholder="2018" />
          </p>
         <div *ngIf="!twelvethpassyear!.valid && (twelvethpassyear!.dirty || twelvethpassyear!.touched)" class="error">
             <div *ngIf="twelvethpassyear!.errors!.required">
-             12th Passing year is required
+          <p>  12th Passing year is required</p> 
             </div>
         </div>  
 
          <p><label>12th Perctange %</label>
-            <input type="number" name="twelvethpercatnge" id="twelvethpercatnge"  formControlName="twelvethpercatnge" /></p>
+            <input type="number" name="twelvethpercatnge" id="twelvethpercatnge"  formControlName="twelvethpercatnge" placeholder="77.23"/></p>
             <div *ngIf="!twelvethpercatnge!.valid && (twelvethpercatnge!.dirty || twelvethpercatnge!.touched)" class="error">
                 <div *ngIf="twelvethpercatnge!.errors!.required">
-                    12th Perctange % is required
+              <p>    12th Perctange % is required</p>  
                 </div>
             </div> 
 
@@ -215,26 +216,26 @@
             <br>
     
             <p><label>Admission Fees</label>
-                <input type="number" name="admissionfees" id="admissionfees"  formControlName="admissionfees" /></p>
+                <input type="number" name="admissionfees" id="admissionfees"  formControlName="admissionfees" placeholder="10084"/></p>
                 <div *ngIf="!admissionfees!.valid && (admissionfees!.dirty || admissionfees!.touched)" class="error">
                     <div *ngIf="admissionfees!.errors!.required">
-                        Admission Fees is required
+                     <p>  Admission Fees is required</p> 
                     </div>
                 </div> 
 
                 <p><label>Tution Fees</label>
-                    <input type="number" name="tutionfees" id="tutionfees"  formControlName="tutionfees" /></p>
+                    <input type="number" name="tutionfees" id="tutionfees"  formControlName="tutionfees"  placeholder="1005"/></p>
                     <div *ngIf="!tutionfees!.valid && (tutionfees!.dirty || tutionfees!.touched)" class="error">
                         <div *ngIf="tutionfees!.errors!.required">
-                            Tution Fees is required
+                          <p>  Tution Fees is required</p>
                         </div>
                     </div> 
 
                     <p><label>Other Fees</label>
-                        <input type="number" name="otherfees" id="otherfees"  formControlName="otherfees" /></p>
+                        <input type="number" name="otherfees" id="otherfees"  formControlName="otherfees" placeholder="1521"/></p>
                         <div *ngIf="!otherfees!.valid && (otherfees!.dirty || otherfees!.touched)" class="error">
                             <div *ngIf="otherfees!.errors!.required">
-                                Other Fees is required
+                             <p>  Other Fees is required</p> 
                             </div>
                         </div> 
 
@@ -262,7 +263,7 @@
             </div>
         </div>  -->
 
-        <label>Maritial Status</label>
+      <p> <label>Maritial Status</label></p> 
         <br>
         <select name="maritialstatus"  id="maritialstatus" formControlName="maritialstatus" >
             <option value="single" selected>Single</option>
@@ -271,30 +272,31 @@
         </select> 
         <div *ngIf="!maritialstatus!.valid && (maritialstatus!.dirty || maritialstatus!.touched)" class="error">
             <div *ngIf="maritialstatus!.errors!.required">
-                Father's Occupation is required
+              <p>  Maritial Status is required</p>
             </div>
         </div>  
         <br>
 
 
            <p><label>Father's Occupation</label>
-            <input type="text" name="fatheroccupation" id="fatheroccupation"  formControlName="fatheroccupation" /></p>
+            <input type="text" name="fatheroccupation" id="fatheroccupation"  formControlName="fatheroccupation" placeholder="Teacher"/></p>
             <div *ngIf="!fatheroccupation!.valid && (fatheroccupation!.dirty || fatheroccupation!.touched)" class="error">
                 <div *ngIf="fatheroccupation!.errors!.required">
-                    Father's Occupation is required
+                 <p>  Father's Occupation is required</p> 
                 </div>
             </div> 
 
             <p><label>Mother's Occupation</label>
-                <input type="text" name="motheroccupation" id="motheroccupation"  formControlName="motheroccupation" /></p>
+                <input type="text" name="motheroccupation" id="motheroccupation"  formControlName="motheroccupation" placeholder="Homemaker"/></p>
                 <div *ngIf="!motheroccupation!.valid && (motheroccupation!.dirty || motheroccupation!.touched)" class="error">
                     <div *ngIf="motheroccupation!.errors!.required">
-                        Mother's Occupation is required
+                      <p>  Mother's Occupation is required</p>
                     </div>
                 </div>  
                 
-                <h3>Schloarship</h3>
-                <label>Schloarship</label>
+                <h3>Scholarship</h3>
+                <br>
+              <p>  <label>Scholarship</label></p>
                 <br>
                 <select name="schlorship" id="schlorship"  formControlName="schlorship" >
                    
@@ -305,7 +307,7 @@
                 </select>  
             <div *ngIf="!schlorship!.valid && (schlorship!.dirty || schlorship!.touched)" class="error">
                 <div *ngIf="schlorship!.errors!.required">
-                    Current Course/Class year is required
+                   <p> Scholarship year is required</p>
                 </div>
             </div> 
 <br>
@@ -316,4 +318,5 @@
         <input type="reset" />
     </p>
   </form>
+</div>
 </div>
