@@ -1,5 +1,7 @@
-<h1 style="text-align: center;">Schloarship Form</h1>
-<form [formGroup]="scholarshipform" (ngSubmit)="submitform()" style="text-align: center;">
+<div class="login">
+    <h2 class="login-header"> SCHOLARSHIP FORM FORM</h2>
+
+<form [formGroup]="scholarshipform" class="login-container" (ngSubmit)="submitform()" style="text-align: center;">
 
     <h3>Basic Details</h3>
     <br>
@@ -16,6 +18,7 @@
         </div>   
 
           <label>Religion</label>
+          <br>
         <select name="religion" id="religion" formControlName="religion">
             
             <option value="hindu" selected>Hindu</option>
@@ -29,9 +32,11 @@
                 religion is required
             </div>
             </div>
-        
+        <br>
+        <br>
 
         <label>Category</label>
+        <br>
         <select name="category" id="category"  formControlName="category" >
            
             <option value="sc" selected>SC</option>
@@ -46,7 +51,7 @@
                 category is required
             </div>
             </div>
-
+<br>
          <p>
           <label >Annual Income</label>
           <input type="number" name="annualincome" id="annualincome" formControlName="annualincome"/>
@@ -258,6 +263,7 @@
         </div>  -->
 
         <label>Maritial Status</label>
+        <br>
         <select name="maritialstatus"  id="maritialstatus" formControlName="maritialstatus" >
             <option value="single" selected>Single</option>
             <option value="divorced" selected>Divorced</option>
@@ -268,6 +274,7 @@
                 Father's Occupation is required
             </div>
         </div>  
+        <br>
 
 
            <p><label>Father's Occupation</label>
@@ -288,6 +295,7 @@
                 
                 <h3>Schloarship</h3>
                 <label>Schloarship</label>
+                <br>
                 <select name="schlorship" id="schlorship"  formControlName="schlorship" >
                    
                     <option value="Post Matric Schloarship" selected>Post Matric Schloarship</option>
@@ -300,7 +308,7 @@
                     Current Course/Class year is required
                 </div>
             </div> 
-
+<br>
      
         
     <p>
@@ -308,3 +316,4 @@
         <input type="reset" />
     </p>
   </form>
+</div>

@@ -17,7 +17,5 @@ export class Scheme3Component implements OnInit {
 
   }
 
- submit=  () => {
-   this.router.navigateByUrl('/Scholarship');
- }
+ 
 }

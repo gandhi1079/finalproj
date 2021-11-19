@@ -25,12 +25,20 @@ export class MinistryService {
     const headerSettings: {[name: string]: string | string[]; } = {};  
     this.header = new HttpHeaders(headerSettings);  
   }  
-  recievedStatus():Observable<boolean>
+  recievedStatus3():Observable<boolean>
   {
     return this.subject.asObservable();
   }
   Login(model : any){        
     return this.http.post<any>(this.Url+'/Login',JSON.stringify(model),this.httpOptions );  
    } 
+   Studentapplicationinfo():Observable<any[]>
+   {
+       return this.http.get<any[]>(this.Url+'/studentlist')
+   }
+   Instituteapplicationinfo():Observable<any[]>
+   {
+       return this.http.get<any[]>(this.Url+'/intitutelist')
+   }
 }
  

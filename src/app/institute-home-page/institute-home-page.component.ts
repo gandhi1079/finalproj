@@ -15,14 +15,14 @@ export class InstituteHomePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  submit=  () => {
-    this.router.navigateByUrl('/StudentApplication');
-  }
-  submit1=  () => {
-    this.router.navigateByUrl('/CheckInstituteStatus');
-  }
-  submit2=  () => {
-    this.router.navigateByUrl('/Home');
-  }
+  // submit=  () => {
+  //   this.router.navigateByUrl('/StudentApplication');
+  // }
+  // submit1=  () => {
+  //   this.router.navigateByUrl('/CheckInstituteStatus');
+  // }
+  // submit2=  () => {
+  //   this.router.navigateByUrl('/Home');
+  // }
 
 }

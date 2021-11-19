@@ -1,0 +1,56 @@
+.container{
+    padding: 70px;
+    width: 50%;
+    
+  } 
+  .div1{
+      background-image: url('/assets/i1 - Copy.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+   
+      
+  }
+
+  form {
+    /* border: 2px solid gray; */
+    width:30%;
+    height:auto;
+    height: 70%;
+  }
+  input[type=number]
+  {
+    width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: 10px;
+  }
+  input[type=password]
+  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button{
+    background-color: #04AA6D;
+    color: white;
+    
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  label{
+      font-weight: 800;
+   color:white;
+  }

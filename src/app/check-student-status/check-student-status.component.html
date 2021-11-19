@@ -1,9 +1,10 @@
 
- <h3>Student Scholarship Status</h3><br>
+ <h3 style="text-align: center;">Student Scholarship Status</h3><br>
 
-<table [border]="1" >
+<table  >
     <tr>
         <td ><b>Status</b></td>
+        <td><b>Application Id</b></td>
         <th>Institute</th>
         <th>State</th>
         <th>Ministry</th>
@@ -11,6 +12,7 @@
     
     <tr *ngFor="let list of info" >
         <td>{{list.schlorship}}</td>
+        <td>{{list.id}}</td>
         <td>{{list.statusbyinstitute}}</td>
         <td>{{list.statusbystate}}</td>
         <td>{{list.statusbyministry}}</td>

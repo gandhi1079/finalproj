@@ -1,2 +1,31 @@
-<h1 style="text-align: center;">Institute Applications</h1>
+<h3 style="text-align: center;">Institute List For Approval</h3><br>
+<table class="table">
+    <thead>
+        <tr>
+        
+            <th>Institute Name</th>
+            <th>Institute Code</th>
+            <th>Dice Code</th>
+            <th>PrinicipalName</th>
+            <th>University Name</th>
+            <th>City</th>
+            <th rowspan="2">Accept/Reject</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of info">
+            <td>{{list.instituteName}}</td>
+            <td>{{list.instituteCode}}</td>
+            <td>{{list.diceCode}}</td>
+            <td>{{list.prinicipalName}}</td>
+            <td>{{list.universityName}}</td>
+            <td>{{list.city}}</td>
+            
+            <td><button (click)="approve(list.instituteCode)">Approve</button></td>
+            <td><button (click)="reject(list.instituteCode)">Reject</button></td>
+        </tr>
+    </tbody>
+</table>
+
 

@@ -1,0 +1,56 @@
+.login{
+    width: 50%;
+    margin:16px auto;
+    font-size: 16px;
+    
+  }
+  .login-header,login p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .login-header{
+    background: rgb(12, 77, 129);
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: cornflowerblue;
+  }
+  .login-container {
+    background: #ebebeb;
+    padding: 5px;
+    color: black;
+  }
+  
+  .login p {
+    padding: 5px;
+  }
+  
+  .login input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+  
+  
+  .login input [type="submit"] {
+    background: lightslategrey;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .login input[type="submit"]:hover {
+    background: #17c;
+  }
+  
+  .login input[type="reset"]:focus {
+    border-color: #05a;
+  }

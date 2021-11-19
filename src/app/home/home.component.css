@@ -1,0 +1,253 @@
+.aa-contact-us-page-hero-image {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 170px;
+    color: #ffffff;
+    text-align: center;
+    background: rgba(49, 63, 84, 0.7) !important;
+  }
+  
+  .aa-contact-us-page-hero-image::after {
+    content: " ";
+    background-size: cover;
+    background-position: center center;
+    background-image: url('/assets/institute1.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+   
+  } 
+  
+  aa-contact-us-page-hero-image .text-container {
+    max-width: 600px;
+    max-height: fit-content;
+  }
+  
+  .aa-contact-us-page-hero-image h2 {
+    font-weight: bold;
+    font-size: 49px;
+    color: #ffffff;
+  }
+  
+  .aa-contact-us-page-hero-image h3 {
+    font-size: 23px; 
+    font-weight: 200;
+    color: #ffffff;
+  }
+  
+  .aa-contact-us-page-address p {
+    width: 100%; 
+    text-align: center;
+  }
+  
+  .aa-contact-us-page-hero-image .contact-form-anchor-link {
+    color: #fff;
+    font-size: 20px;
+    margin-left: -1em;
+    display: block;
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+    bottom: 60px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .aa-contact-us-page-hero-image .contact-form-anchor-link:hover {
+    color: darken(#ffffff, 15%);
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+  }
+      
+  
+  .inner-contact-us-form {
+         max-width: 70%;
+         margin: 0px auto;
+         vertical-align: middle;
+      overflow: auto;
+     }
+     .contact-us-form {
+         background-color: #000000;
+         /* AA: this can be deleted later */
+         text-align: center;
+         padding-top: 20px;
+         padding-bottom: 20px;
+     }
+     
+     .inner-contact-us-form h1 {
+       color: #ffffff;
+       display: block;
+       float: left;
+       vertical-align:top;
+       text-align: left;
+       margin-right: 20px;
+       text-transform: uppercase;
+       width: 320px;
+     }
+     
+     div.contact-us-form-body {
+       display: block;
+       float: left;
+       width: calc(100% - 320x);
+     }
+     
+     .contact-us-form .contact-us-form-field-wrapper label,
+     .contact-us-form .contact-us-form-field-wrapper span.label {
+         color: #ffffff;
+         display: block;
+         float: left;
+      text-align: left;
+      width: 240px;
+      font-size: 1em;
+      padding-left: 0px;
+      padding-right: 0px;
+      }
+    
+         .contact-us-form input {
+             float: left;
+             display: block;
+             background-color: #353535;
+         }
+      
+         .contact-us-form input[type="text"] {
+        width: 250px;
+         }
+      
+         .contact-us-form select, 
+      .contact-us-form .checkbox-group {
+             float: left;
+             display: block;
+         }
+      
+      .contact-us-form select {
+        width: 150px;
+      }
+      
+      .contact-us-form .checkbox-group {
+        text-align:left;
+        color: #ffffff;
+      }
+      
+         .contact-us-form textarea {
+             float: left;
+             display: block;
+             background-color: #353535;
+        width: 250px;
+         }
+  
+         .contact-us-form-field-wrapper {
+             clear: both;
+        padding: 10px 10px;
+         }
+      
+      .checkbox-group .contact-us-form-field-wrapper {
+        padding: inherit;
+      }
+      
+      .clear {
+        width: 100%;
+        display: block;
+        clear: both;
+      }
+      
+      .contact-us-form label.form-checkbox {
+        max-width: 240px;
+      }
+      
+      .contact-us-form button.btn {
+        float:left;
+        font-size: 1.3em;
+        margin: 30px 10px;
+      }
+      
+    /* Large screens (1405px upwards) */
+  @media only screen and ( min-width: 1405px ) { 
+      /* placeholder */
+  }
+  
+  /* Laptops and desktops (1100-1405px) */
+  @media only screen and ( min-width: 1100px ) and ( max-width: 1405px) { 
+      /* placeholder */
+  }
+  
+  /* Tablets in landscape mode (981-1100px) */
+  @media only screen and ( min-width: 981px ) and ( max-width: 1100px ) { 
+      /* placeholder */
+  }
+  
+  /* Tablets in portrait mode (768-980px) */
+  @media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
+      /* placeholder */
+      
+  }
+  
+  /* Smartphones in landscape mode (480-768px) */
+  @media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
+  
+    /* placeholder */
+      .inner-contact-us-form {
+        max-width: 80%;
+      }
+      .inner-contact-us-form h1 {
+        font-size: 1.7em;
+        max-width: 300px;
+      }
+      
+      div.checkbox-group {
+        width:100%;
+      }
+      
+     .contact-us-form .contact-us-form-field-wrapper label,
+     .contact-us-form .contact-us-form-field-wrapper span.label {
+        width: 250px; 
+      }
+      
+      .contact-us-form label.form-checkbox {
+        width: inherit;
+        max-width: 240px;
+      }
+      
+      .contact-us-form .contact-us-form-field-wrapper input[type="text"],
+      .contact-us-form .contact-us-form-field-wrapper select,
+      .contact-us-form .contact-us-form-field-wrapper textarea {
+        clear: both;
+        width: 250px;
+      }
+  }
+  
+  /* Smartphones in portrait mode (0-479px) */
+  @media only screen and ( max-width: 479px ) {
+     /* placeholder */
+      .inner-contact-us-form {
+        max-width: 90%;
+      }
+      
+      .inner-contact-us-form h1 {
+        font-size: 1.5em;
+        max-width: 280px;
+      }
+      
+      div.checkbox-group {
+        width:100%;
+      }
+      
+     .contact-us-form .contact-us-form-field-wrapper label,
+     .contact-us-form .contact-us-form-field-wrapper span.label {
+        width: 250px; 
+      }
+      
+      .contact-us-form label.form-checkbox {
+        width: inherit;
+        max-width: 240px;
+      }
+      
+      .contact-us-form .contact-us-form-field-wrapper input[type="text"],
+      .contact-us-form .contact-us-form-field-wrapper select,
+      .contact-us-form .contact-us-form-field-wrapper textarea {
+        clear: both;
+        width: 250px;
+      }
+  }

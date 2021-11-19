@@ -98,7 +98,7 @@ export class InstituteRegistrationComponent implements OnInit {
          });
     }
 
-  RegisterInsitute()    
+  RegisterInstitute()    
   {    
   this.loginService.Register(this.instituteform.value).subscribe(    
     (data)=>    
@@ -115,4 +115,5 @@ export class InstituteRegistrationComponent implements OnInit {
     }
     );   
 }
+
 }

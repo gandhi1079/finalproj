@@ -1,4 +1,4 @@
-<div class="container" style="padding-top:60px;">  
+<!-- <div class="container" style="padding-top:60px;">  
     <div class="row">  
       <div class="col-md-6 mx-auto">  
         <div class="card-group">  
@@ -40,4 +40,34 @@
         </div>  
       </div>  
     </div>  
-  </div>  
+  </div>   -->
+  <div class="div1">
+    <div class="container">
+    <form name="form" (ngSubmit)="login()" #f="ngForm" style="width: 100%; height: 100%;">   
+      <h1 style="text-align:center">Login</h1>  
+
+     
+        <label>User Name:</label>
+        <input type="text" name="Userid" [(ngModel)]="model.Userid" class="form-control" placeholder="User Id" required>  
+    
+        <label sty>Password:</label>
+        <input  type="password" name="password" [(ngModel)]="model.Password" class="form-control"  
+       placeholder="Password">  
+
+      
+      
+      <div>  
+          <p style="color:#E92626;font-size:20px;font-weight:normal" Class="success" >  
+            {{errorMessage}}  
+          </p>  
+        </div>  
+      <div class="row">  
+        <div class="col-6">  
+          <button type="submit" class="btn btn-primary px-4">Login</button>  
+        </div>  
+       
+      </div>  
+
+    </form> 
+  </div> 
+</div>

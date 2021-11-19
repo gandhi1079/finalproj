@@ -1,0 +1,40 @@
+<div>
+<h3 style="text-align: center;">Student List For Approval</h3><br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Application Id</th>
+            <th>Student Name</th>
+            <th>Gender</th>
+            <th>Aadhar Number</th>
+            <th>Category</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Family Income</th>
+            <th>Maritial Status</th>
+            <th>Mother's Occupation</th>
+            <th>Father's Occupation</th>
+            <th> Scholarship Applied</th>
+            <th rowspan="2">Approve/Reject</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of info">
+            <td>{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <td>{{list.dob|date:'d/M/y'}}</td>
+            <td>{{list.aadharnumber}}</td>
+            <td>{{list.category}}</td>
+            <td>{{list.currentcourse}}</td>
+            <td>{{list.currentyear}}</td>
+            <td>{{list.annualincome}}</td>
+            <td>{{list.maritialstatus}}</td>
+            <td>{{list.motheroccupation}}</td>
+            <td>{{list.fatheroccupation}}</td>  
+            <td>{{list.schlorship}}</td> 
+            <td><button (click)="approve(list.id)">Approve</button></td>
+            <td><button (click)="reject(list.id)">Reject</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

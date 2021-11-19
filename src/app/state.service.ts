@@ -20,7 +20,7 @@ export class StateService {
   constructor(private http : HttpClient) {   
 
     //this.Url = 'http://localhost:14812/api/Login/';  
-    this.Url='http://localhost:57596/api/users';
+    this.Url='http://localhost:5000/api/state';
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };  
     
     const headerSettings: {[name: string]: string | string[]; } = {};  
@@ -31,11 +31,19 @@ export class StateService {
   {
     this.subject.next(message)
   } */
-  recievedStatus():Observable<boolean>
+  recievedStatus2():Observable<boolean>
   {
     return this.subject.asObservable();
   }
   Login(model : any){        
-    return this.http.post<any>(this.Url+'/UserLogin',JSON.stringify(model),this.httpOptions );  
+    return this.http.post<any>(this.Url+'/Login',JSON.stringify(model),this.httpOptions );  
   }  
+  Studentapplicationinfo():Observable<any[]>
+   {
+       return this.http.get<any[]>(this.Url+'/studentlist')
+   }
+   Instituteapplicationinfo():Observable<any[]>
+   {
+       return this.http.get<any[]>(this.Url+'/intitutelist')
+   }
 }

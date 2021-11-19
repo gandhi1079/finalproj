@@ -32,6 +32,14 @@ import { MenuComponent } from './menu/menu.component';
 import { StudentprofileComponent } from './studentprofile/studentprofile.component';
 import { MinistryLoginComponent } from './ministry-login/ministry-login.component';
 import { StateNodalOfficerLoginComponent } from './state-nodal-officer-login/state-nodal-officer-login.component';
+import { StudentApplicationFormStateComponent } from './student-application-form-state/student-application-form-state.component';
+import { StudentApplicationFormMinistryComponent } from './student-application-form-ministry/student-application-form-ministry.component';
+import { InstituteApplicationFormMinistryComponent } from './institute-application-form-ministry/institute-application-form-ministry.component';
+import { StudentHomeComponent } from './student-home/student-home.component';
+import { InstituteHomeComponent } from './institute-home/institute-home.component';
+import { StateHomePageComponent } from './state-home-page/state-home-page.component';
+import { MinistryHomePageComponent } from './ministry-home-page/ministry-home-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +68,14 @@ import { StateNodalOfficerLoginComponent } from './state-nodal-officer-login/sta
     StudentprofileComponent,
     MinistryLoginComponent,
     StateNodalOfficerLoginComponent,
+    StudentApplicationFormStateComponent,
+    StudentApplicationFormMinistryComponent,
+    InstituteApplicationFormMinistryComponent,
+    StudentHomeComponent,
+    InstituteHomeComponent,
+    StateHomePageComponent,
+    MinistryHomePageComponent,
+  
 
   ],
   imports: [

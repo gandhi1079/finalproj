@@ -30,7 +30,7 @@ export class StateNodalOfficerLoginComponent implements OnInit {
           sessionStorage.setItem('Userid',this.model.Userid)
           //this.Service.sendstatus(true);
           this.Service.subject.next(true);
-          this.router.navigate(['InstituteHomePage']);     
+          this.router.navigate(['StateNodalHome']);     
            
       },    
       error => {    

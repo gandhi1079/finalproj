@@ -91,7 +91,7 @@ contactform!: FormGroup;
 
   ngOnInit() {
     this.contactform=this.formbuider.group ({
-      name: ['',[Validators.required,Validators.pattern("^[a-zA-Z]*$")]],
+      name: ['',Validators.required],
      // mname: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z]*$")]),
      // motname: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z]*$")]),
       //lname: new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z]*$")]),

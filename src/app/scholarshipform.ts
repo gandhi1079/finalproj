@@ -29,5 +29,6 @@ export class Scholarshipform {
     statusbyinstitute!:string;
   statusbystate!:string;
   statusbyministry!:string;
+  id!:number;
     
 }

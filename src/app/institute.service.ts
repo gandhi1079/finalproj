@@ -33,7 +33,7 @@ export class InstituteService {
   {
     this.subject.next(message)
   } */
-  recievedStatus():Observable<boolean>
+  recievedStatus1():Observable<boolean>
   {
     return this.subject.asObservable();
   }
@@ -52,8 +52,19 @@ export class InstituteService {
    {
        return this.http.get<any[]>(this.Url+'/'+institutecode)
    }
+   
    Instituteapplicationstatus(institutecode:any):Observable<any>
    {
        return this.http.get<any>(this.Url+'/status/'+institutecode)
    }
-}//http://localhost:5000/api/institute/DE1659
+   instituteapproval(InstituteCode:string):Observable<any>{
+    return this.http.get<any>(this.Url+'/Institute/'+InstituteCode,this.httpOptions)
+  }
+  //schloarship(Id:number):Observable<any>{
+  //  return this.http.get<any>(this.Url+'/'+Id,this.httpOptions);
+
+  update(InstituteCode:string,update:Instituteregister): Observable<any> {
+      return this.http.put<any>(this.Url +'/update/' + InstituteCode,JSON.stringify(update),this.httpOptions)
+  }
+  }
+//http://localhost:5000/api/institute/DE1659

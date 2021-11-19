@@ -1,143 +1,153 @@
 
-  <form [formGroup]="instituteform" (ngSubmit)="RegisterInsitute()">
+  <div class="login">
+    <h2 class="login-header"> INSTITUTE REGISTRATION FORM</h2>
+    <form [formGroup]="instituteform" class="login-container" (ngSubmit)="RegisterInstitute()">
     <p>
         <label for="institutename"> Institute Name</label>
-        <input type="text" id="institutename" name="institutename" formControlName="institutename"/>
+        <input type="text" id="institutename" name="institutename" formControlName="institutename" placeholder="Swami Guidance"/>
     </p>
     
   <div *ngIf="!institutename?.valid && (institutename?.dirty || institutename?.touched)" class="error">
     <div *ngIf="institutename!.errors!.required">
-      Institute Name is required
+     <p > Institute Name is required</p>
     </div>
   
   </div>
   
      <p>
-        <label for="institutecode">Institute-code</label>
-        <input type="text" id="institutecode" name="institutecode" formControlName="institutecode"/>
+        <label for="institutecode">Institute Code</label>
+        <input type="text" id="institutecode" name="institutecode" formControlName="institutecode" placeholder="DE1234"/>
     </p>
     <div *ngIf="!institutecode?.valid && (institutecode?.dirty || institutecode?.touched)" class="error">
         <div *ngIf="institutecode!.errors!.required">
-          Institute Code is required
+          <p >Institute Code is required</p>
         </div>
     </div>
     
     <p>
-        <label for="dicecode">DICE-code</label>
-        <input type="text" id="dicecode" name="dicecode" formControlName="dicecode"/>
+        <label for="dicecode">DICE Code</label>
+        <input type="text" id="dicecode" name="dicecode" formControlName="dicecode" placeholder="AZ1234"/>
     </p>
     <div *ngIf="!dicecode?.valid && (dicecode?.dirty || dicecode?.touched)" class="error">
         <div *ngIf="dicecode!.errors!.required">
-          DICE Code is required
+          <p > DICE Code is required</p>
         </div>
     </div>
 
     <p>
-        <label for="prinicipalname">Principal-Name</label>
-        <input type="text" id="prinicipalname" name="prinicipalname" formControlName="prinicipalname"/>
+        <label for="prinicipalname">Principal Name</label>
+        <input type="text" id="prinicipalname" name="prinicipalname" formControlName="prinicipalname" placeholder="Mohan"/>
     </p>
     <div *ngIf="!prinicipalname?.valid && (prinicipalname?.dirty || prinicipalname?.touched)" class="error">
         <div *ngIf="prinicipalname!.errors!.required">
-          DICE Code is required
+          <p >  DICE Code is required</p>
         </div>
     </div>
   
   
     <p>
-      <label for="telephone">College Telephone</label>
-      <input type="number" id="telephone" name="telephone" formControlName="telephone"/>
+      <label for="telephone">College Telephone Number</label>
+      <input type="number" id="telephone" name="telephone" formControlName="telephone" placeholder="xxxxxxxxxx"/>
   </p>
   <div *ngIf="!telephone?.valid && (telephone?.dirty || telephone?.touched)" class="error">
     <div *ngIf="telephone!.errors!.required">
-     Telephone is required
+      <p > College Telephone Number is required</p>
     </div>
 </div>
 
   
   <p>
-    <label for="mobileno">Mobile Number</label>
-    <input type="number" id="mobileno" name="mobileno" formControlName="mobileno"/>
+    <label for="mobileno">Principal Mobile Number</label>
+    <input type="number" id="mobileno" name="mobileno" formControlName="mobileno" placeholder="xxxxxxxxxx"/>
   </p>
   <div *ngIf="!mobileno?.valid && (mobileno?.dirty || mobileno?.touched)" class="error">
     <div *ngIf="mobileno!.errors!.required">
-      Mobile Number is required
+      <p >  Mobile Number is required</p>
     </div>
 </div>
 
   
   <p>
-        <label for="universityname">University-Name</label>
-        <input type="text" id="universityname" name="universityname" formControlName="universityname"/>
+        <label for="universityname">University Name</label>
+        <input type="text" id="universityname" name="universityname" formControlName="universityname" placeholder="Swami Gurudev"/>
   </p>
   <div *ngIf="!universityname?.valid && (universityname?.dirty || universityname?.touched)" class="error">
     <div *ngIf="universityname!.errors!.required">
-      University Name is required
+      <p > University Name is required</p>
     </div>
 </div>
   
    
     <p>
     <label for="city">City</label>
-    <input type="text" id="city" name="city" formControlName="city"/>
+    <input type="text" id="city" name="city" formControlName="city" placeholder="Pune"/>
     </p>
     <div *ngIf="!city?.valid && (city?.dirty || city?.touched)" class="error">
         <div *ngIf="city!.errors!.required">
-          City is required
+          <p >  City is required</p>
         </div>
     </div>
   
   <p>
     <label for="district">District</label>
-    <input type="text" id="district" name="district" formControlName="district"/>
+    <input type="text" id="district" name="district" formControlName="district" placeholder="Buldhana"/>
   </p>
   <div *ngIf="!district?.valid && (district?.dirty || district?.touched)" class="error">
     <div *ngIf="district!.errors!.required">
-        District is required
+      <p > District is required</p>
     </div>
      </div>
   
   <p>
     <label for="state">State</label>
-    <input type="text" id="state" name="state" formControlName="state"/>
+    <input type="text" id="state" name="state" formControlName="state" placeholder="Maharashtra"/>
   </p>
        <div *ngIf="!state?.valid && (state?.dirty || state?.touched)" class="error">
     <div *ngIf="state!.errors!.required">
-        State is required
+      <p > State is required</p>
     </div>
     </div>
   
      <p>
             <label for="pincode">Pin</label>
-            <input type="number" id="pincode" name="pincode" formControlName="pincode"/>
+            <input type="number" id="pincode" name="pincode" formControlName="pincode" placeholder="xxxxxx"/>
         </p>
         <div *ngIf="!pincode!.valid && (pincode!.dirty || pincode!.touched)" class="error">
             <div *ngIf="pincode!.errors!.required">
-              Pincode is required
+              <p style="text-align: center;">  Pincode is required</p>
             </div>
         </div>
    
         <p>
             <label for="password">Set Password</label>
-            <input type="text" id="password" name="password" formControlName="password"/>
+            <input type="password"  id="password" name="password" formControlName="password"/>
         </p>
         <div *ngIf="!password!.valid && (password!.dirty || password!.touched)" class="error">
             <div *ngIf="password!.errors!.required">
-              Password is required
+              <p >   Password is required</p>
             </div>
         </div>
         <p>
             <label for="confirmpwd">Confirm Password</label>
-            <input type="text" id="confirmpwd" name="confirmpwd" formControlName="confirmpwd"/>
+            <input type="password" id="confirmpwd" name="confirmpwd" formControlName="confirmpwd"/>
         </p>
         <div *ngIf="!confirmpwd!.valid && (confirmpwd!.dirty || confirmpwd!.touched)" class="error">
             <div *ngIf="confirmpwd!.errors!.required">
-              Confirm the password
+              <p > Password is password</p>
             </div>
         </div>  
-        <a formControlName="statusbyministry"></a>
+        
     <p>       
-        <input type="submit" [disabled]="!instituteform.valid" value="Register"/>
+        <input type="submit"  [disabled]="!instituteform.valid" value="Register"/>
         <input type="reset"/>
+        {{message}}
     </p>
   </form>
+  <script>
+    
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
   

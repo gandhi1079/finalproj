@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Register } from './register';
+import { Scholarshipform } from './scholarshipform';
 
 @Injectable({
   providedIn: 'root'
@@ -40,4 +41,18 @@ export class ScholarshipformService {
    {
        return this.http.get<any>(this.Url+'/status/'+aadharnumber)
    }
+  //  getAll(): Observable<any[]> {
+  //   return this.http.get<any[]>(this.Url)
+  // }
+   update(Id:number,update:Scholarshipform): Observable<any> {
+    return this.http.put<any>(this.Url +'/update/' + Id,JSON.stringify(update),this.httpOptions)
+    
+   }
+  schloarship(Id:number):Observable<any>{
+    return this.http.get<any>(this.Url+'/'+Id,this.httpOptions);
+  }
+  // getById(Id:number): Observable<any> {
+  //   return this.http.get<any>(this.Url +'/' + Id)
+   
+  // }
 }
