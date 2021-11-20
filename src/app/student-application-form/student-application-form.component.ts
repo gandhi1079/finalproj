@@ -63,6 +63,7 @@ export class StudentApplicationFormComponent implements OnInit {
       data.statusbyinstitute="approved"
       this.service1.update(id,data).subscribe((res)=>{
         console.log(res);
+        this.ngOnInit();
       })
     })
   }
@@ -72,6 +73,7 @@ export class StudentApplicationFormComponent implements OnInit {
       data.statusbyinstitute="rejected"
       this.service1.update(id,data).subscribe((res)=>{
         console.log(res);
+        this.ngOnInit();
       })
     })
   }

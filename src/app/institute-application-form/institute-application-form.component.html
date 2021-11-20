@@ -1,19 +1,16 @@
-<h3 style="text-align: center;">Institute List For Approval</h3><br>
-<table class="table">
-    <thead>
-        <tr>
-        
-            <th>Institute Name</th>
+ <div style="background-color: rgb(229, 229, 247);">
+    <h2 style="text-align: center;padding-top: 1cm;"><i>Institute List For Approval</i></h2><br>
+      <table style="padding-bottom: 2cm;" >
+           <tr style="font-weight: 500; font-size: 0.5cm;">
+           <th>Institute Name</th>
             <th>Institute Code</th>
             <th>Dice Code</th>
             <th>PrinicipalName</th>
             <th>University Name</th>
             <th>City</th>
-            <th rowspan="2">Accept/Reject</th>
-           
-        </tr>
-    </thead>
-    <tbody>
+            <th >Accept</th>
+               <th> Reject</th>
+         </tr>
         <tr *ngFor="let list of info">
             <td>{{list.instituteName}}</td>
             <td>{{list.instituteCode}}</td>
@@ -25,7 +22,13 @@
             <td><button (click)="approve(list.instituteCode)">Approve</button></td>
             <td><button (click)="reject(list.instituteCode)">Reject</button></td>
         </tr>
-    </tbody>
-</table>
+    
+</table><br><br>
+<br>
+<br>
+</div>
+
+
+
 
 

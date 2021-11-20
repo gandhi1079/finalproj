@@ -15,10 +15,10 @@ export class InstituteApplicationFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.Instituteapplicationinfo().subscribe((res)=>{
-    //  console.log(res);
+     console.log(res);
       this.info=res;
-    //  console.log(this.info);
-      this.ngOnInit();
+      console.log(this.info);
+      
     }
     )
   }

@@ -39,6 +39,8 @@ import { StudentHomeComponent } from './student-home/student-home.component';
 import { InstituteHomeComponent } from './institute-home/institute-home.component';
 import { StateHomePageComponent } from './state-home-page/state-home-page.component';
 import { MinistryHomePageComponent } from './ministry-home-page/ministry-home-page.component';
+import { SchemeComponent } from './scheme/scheme.component';
+
 
 @NgModule({
   declarations: [
@@ -75,6 +77,7 @@ import { MinistryHomePageComponent } from './ministry-home-page/ministry-home-pa
     InstituteHomeComponent,
     StateHomePageComponent,
     MinistryHomePageComponent,
+    SchemeComponent,
   
 
   ],

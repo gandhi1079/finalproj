@@ -28,6 +28,7 @@ export class StudentApplicationFormMinistryComponent implements OnInit {
       data.statusbyministry="approved"
       this.service1.update(id,data).subscribe((res)=>{
         console.log(res);
+        this.ngOnInit();
       })
     })
   }
@@ -37,6 +38,7 @@ export class StudentApplicationFormMinistryComponent implements OnInit {
       data.statusbyministry="rejected"
       this.service1.update(id,data).subscribe((res)=>{
         console.log(res);
+        this.ngOnInit();
       })
     })
   }

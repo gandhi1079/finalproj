@@ -14,13 +14,17 @@
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" routerLink="Home">Home </a>
+        
       </li></ul>
     </div>
     <div *ngIf="message">
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" routerLink="StudentHomePage/StudentHome">Student Home </a>
-        </li></ul>
+        </li>
+       
+      </ul>
+       
     </div>
     <div *ngIf="message1">
       <ul class="navbar-nav">
@@ -62,14 +66,14 @@
     </div>
     
     <div *ngIf="message"><ul class="navbar-nav">
+       <li class="nav-item">
+        <a class="nav-link" routerLink="StudentHomePage/Scheme">Scheme</a>
+      </li> 
       <li class="nav-item">
-        <a class="nav-link" routerLink="StudentHomePage/Studentprofile">My Profile</a>
+        <a class="nav-link" routerLink="StudentHomePage/Scholarship">Form</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="StudentHomePage/Scholarship">Scholarship</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="StudentHomePage/CheckStudentStatus">Scholarship Status</a>
+        <a class="nav-link" routerLink="StudentHomePage/CheckStudentStatus">Status</a>
       </li>
     <li class="nav-item">
       <a  class="nav-link" [routerLink]=""  (click)='logout()'>Logout</a>
@@ -146,7 +150,7 @@
 <router-outlet></router-outlet>
 
 <footer class="page-footer  font-small blue pt-4 bg-dark ">
-<div class="footer-copyright text-center py-3"><p style="color: white;">© 2020 Copyright:</p>
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+<div class="footer-copyright text-center py-3"><p style="color: white;">© 2021 Copyright: Scholarship Portal</p>
+    
   </div>
 </footer>

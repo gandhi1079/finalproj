@@ -16,6 +16,7 @@ import { MinistryHomePageComponent } from './ministry-home-page/ministry-home-pa
 import { MinistryHomeComponent } from './ministry-home/ministry-home.component';
 import { MinistryLoginComponent } from './ministry-login/ministry-login.component';
 import { NewRegistrationOptionsComponent } from './new-registration-options/new-registration-options.component';
+import { SchemeComponent } from './scheme/scheme.component';
 import { Scheme1Component } from './scheme1/scheme1.component';
 import { Scheme2Component } from './scheme2/scheme2.component';
 import { Scheme3Component } from './scheme3/scheme3.component';
@@ -64,12 +65,13 @@ children:
 {path:'StudentHomePage',component:StudentHomePageComponent,
 children:
 [{path:'',redirectTo:'/StudentHomePage/StudentHome', pathMatch:'full'},
-{path:'StudentHome',component:StudentHomeComponent,
+{path:'StudentHome',component:StudentHomeComponent},
+{path:'Scheme',component:SchemeComponent,
 children:
-[{path:'Scheme1',component: Scheme1Component},
+[{path:'',redirectTo:'/StudentHomePage/Scheme/Scheme1', pathMatch:'full'},
+{path:'Scheme1',component: Scheme1Component},
 {path:'Scheme2',component: Scheme2Component},
-{path:'Scheme3',component: Scheme3Component}
-]},
+{path:'Scheme3',component: Scheme3Component}]},
 {path:'Scholarship',component: ScholarshipComponent},
 {path: 'CheckStudentStatus', component: CheckStudentStatusComponent},
 {path:'Studentprofile',component:StudentprofileComponent}]

@@ -17,7 +17,7 @@ export class InstituteApplicationFormMinistryComponent implements OnInit {
       console.log(res);
       this.info=res;
       console.log(this.info);
-      this.ngOnInit();
+      
     })
   }
   approve(institutecode:string){
